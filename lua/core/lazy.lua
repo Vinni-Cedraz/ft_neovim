@@ -20,6 +20,7 @@ lazy.setup({
 	({ "sindrets/diffview.nvim" }),
 	-- Syntax Highlighting
 	({ "nvim-treesitter/nvim-treesitter" }),
+	({ "akinsho/bufferline.nvim", commit = "83bf4dc7bff642e145c8b4547aa596803a8b4dc4" }),
 	-- LSP/Linters/Daps Manager (mason)
 	({ "williamboman/mason.nvim" });
 	-- Navigation
@@ -29,7 +30,6 @@ lazy.setup({
 	({ "nvim-telescope/telescope.nvim" }),
 	({ "voldikss/vim-floaterm" }),
 	({ "moll/vim-bbye" }),
-	({ "akinsho/bufferline.nvim" }),
 	({ "nvim-lualine/lualine.nvim" }),
 	-- 42 linters
 	({ "cacharle/c_formatter_42.vim" }),
