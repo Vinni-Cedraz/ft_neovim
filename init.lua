@@ -1,3 +1,13 @@
+local site_dir = vim.fn.expand("~/.local/share/nvim/site")
+
+-- Spawn a background job to delete the site (from Packer plugin manager) directory.
+-- this will avoid issues if the user has used Packer before this setup with lazy.nvim
+vim.defer_fn(function()
+  if vim.loop.fs_stat(site_dir) then
+    vim.fn.system({ "rm", "-rf", site_dir })
+  end
+end, 0)
+
 -- PLUGIN MANAGER SETUP
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then

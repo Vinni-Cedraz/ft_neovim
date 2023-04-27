@@ -3,7 +3,7 @@ function SetTransparentBackground()
 	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 	require("catppuccin").setup({
 		transparent_background = true,
- 		no_italic = true, -- Force no italic
+		no_italic = true, -- Force no italic
 	})
 	require("nightfox").setup({
 		options = {
@@ -16,6 +16,9 @@ function SetTransparentBackground()
 	})
 	require("tokyonight").setup({
 		transparent = true,
+		colors = {
+			bg_float = "none",
+		},
 	})
 end
 
