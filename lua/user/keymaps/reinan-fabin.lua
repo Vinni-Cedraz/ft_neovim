@@ -7,8 +7,6 @@ Keymap("n", "<leader>g", "gg=G", { silent = true }) -- Fix indentation in curren
 vim.keymap.set("n", "<leader>g", "gg=G")
 
 -- Move Lines
-Keymap("n", "<C-j>", "<cmd>m +1 <CR>") -- CTRL + j Move line down
-Keymap("n", "<C-k>", "<cmd>m.-2 <CR>") -- CTRL + k Move line up
 Keymap("v", "<C-j>", ":m '>+1<CR>gv=gv") -- CTRL + j in visual mode moves every line selected down
 Keymap("v", "<C-k>", ":m '<-2<CR>gv=gv") -- CTRL + k in visual mode moves every line selected up
 

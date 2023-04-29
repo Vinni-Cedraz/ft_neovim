@@ -2,8 +2,6 @@
 Keymap("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", { noremap = true })
 
 -- Text Object Manipulation
-Keymap("v", "J", ":m '>+1<CR>gv=gv", Opts)
-Keymap("v", "K", ":m '<-2<CR>gv=gv", Opts)
 Keymap("n", "J", "mzJ`z", Opts)
 Keymap("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/]], Opts)
 Keymap("v", ">", ">gv", Opts) -- indents deeper
