@@ -7,12 +7,14 @@ vim.g.mapleader = " "
 
 -- Normal Mode jk
 Keymap("i", "jk", "<ESC>", Opts)
+Keymap("i", "kj", "<ESC>", Opts)
 
 -- Essentials
 Keymap("n", "<S-w>", ":w<CR>", Opts)
 Keymap("n", "<S-x>", ":x<CR>", Opts)
 Keymap("n", "<S-r>", ":redo<CR>", Opts)
 Keymap("n", "<C-q>", ":qa!<cr>", Opts)
+Keymap("n", "<leader>a", "<cmd>lua vim.lsp.buf.code_action()<CR>", Opts) -- code action
 
 -- Comment Code
 Keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle.linewise.current()<CR>", Opts)
@@ -25,7 +27,7 @@ Keymap(
 	":FloatermNew --height=0.6 --width=0.4 --wintype=float --position=topleft --cwd=<buffer><CR>",
 	Opts
 )
-Keymap("n", "<leader>cc", ":FloatermNew --autoclose=0 cc -g -w -lm % -o %< && ./%< <CR>", Opts)
+Keymap("n", "<leader>cc", ":FloatermNew --autoclose=0 cc -g -Wall -Wextra -Werror -fsanitize=address -lm % -o %< && ./%< <CR>", Opts)
 
 -- Telescope
 Keymap("n", "<leader>fh", ":Telescope find_files cwd=~/ <CR>", Opts)
