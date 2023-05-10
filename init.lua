@@ -22,8 +22,9 @@ if not vim.loop.fs_stat(lazypath) then
 end
 
 vim.opt.rtp:prepend(lazypath)
+vim.g.mapleader = " "
 require("core.options")
-require("core.lazy")
+require('lazy').setup("plugins")
 
 -- CONFIG MODULES FOR EACH PLUGIN
 require("user.impatient")
