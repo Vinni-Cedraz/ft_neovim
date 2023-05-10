@@ -3,7 +3,6 @@ Opts = { silent = true }
 
 -- set leader key to space
 Keymap("", "<Space>", "<Nop>", Opts)
-vim.g.mapleader = " "
 
 -- Normal Mode jk
 Keymap("i", "jk", "<ESC>", Opts)
