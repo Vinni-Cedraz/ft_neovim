@@ -1,6 +1,8 @@
 local servers = {
 	"clangd",
 	"lua_ls",
+	"tsserver",
+	"bashls",
 }
 
 local settings = {
@@ -14,6 +16,7 @@ local settings = {
 	},
 	max_concurrent_installers = 4,
 }
+
 require("lspconfig").robotframework_ls.setup({})
 require("mason").setup(settings)
 require("mason-lspconfig").setup({
