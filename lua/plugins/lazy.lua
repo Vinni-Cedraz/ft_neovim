@@ -38,15 +38,7 @@ return {
 			require("lspsaga").setup({})
 		end,
 	},
-	{
-		"zbirenbaum/copilot.lua",
-		event = { "vimenter" },
-		config = function()
-			vim.defer_fn(function()
-				require("user.copilot").setup()
-			end, 100)
-		end,
-	},
+	{ "zbirenbaum/copilot.lua" },
 	{
 		"zbirenbaum/copilot-cmp",
 		commit = "b732a58ac8b7287b981cd9f0d9c0f61e5e9d5760",
