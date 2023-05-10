@@ -17,7 +17,6 @@ lazy.setup({
 	({ "jose-elias-alvarez/null-ls.nvim" }),
 	({ "nvim-telescope/telescope-fzf-native.nvim" }),
 	({ "ahmedkhalf/project.nvim" }),
-	({ "sindrets/diffview.nvim" }),
 	-- Syntax Highlighting
 	({ "nvim-treesitter/nvim-treesitter" }),
 	({ "akinsho/bufferline.nvim", commit = "83bf4dc7bff642e145c8b4547aa596803a8b4dc4" }),

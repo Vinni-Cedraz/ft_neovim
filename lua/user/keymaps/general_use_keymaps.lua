@@ -15,6 +15,7 @@ Keymap("n", "<S-x>", ":x<CR>", Opts)
 Keymap("n", "<S-r>", ":redo<CR>", Opts)
 Keymap("n", "<C-q>", ":qa!<cr>", Opts)
 Keymap("n", "<leader>a", "<cmd>lua vim.lsp.buf.code_action()<CR>", Opts) -- code action
+Keymap("n", "<F3>", ":UndotreeToggle<CR>", Opts)
 
 -- Comment Code
 Keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle.linewise.current()<CR>", Opts)
