@@ -1,5 +1,4 @@
 return {
-	{ "lewis6991/impatient.nvim" },
 	{ "catppuccin/nvim" },
 	{ "EdenEast/nightfox.nvim" },
 	{ "rose-pine/neovim" },
