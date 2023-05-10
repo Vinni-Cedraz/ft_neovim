@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 configs.setup({
-	ensure_installed = { "lua", "c", "bash", "markdown", "markdown_inline"},
+	ensure_installed = { "lua", "c", "bash", "markdown", "markdown_inline", "javascript"},
 	ignore_install = { "" },
 	sync_install = false,
 	highlight = {

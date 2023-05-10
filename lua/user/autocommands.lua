@@ -21,24 +21,6 @@ create_autocmd({ "BufEnter" }, {
 	end,
 })
 
-create_autocmd({ "VimResized" }, {
-	callback = function()
-		vim.cmd("tabdo wincmd =")
-	end,
-})
-
-create_autocmd({ "CmdWinEnter" }, {
-	callback = function()
-		vim.cmd("quit")
-	end,
-})
-
-create_autocmd({ "BufWinEnter" }, {
-	callback = function()
-		vim.cmd("set formatoptions-=cro")
-	end,
-})
-
 create_autocmd({ "TextYankPost" }, {
 	callback = function()
 		vim.highlight.on_yank({ higroup = "Visual", timeout = 70 })
