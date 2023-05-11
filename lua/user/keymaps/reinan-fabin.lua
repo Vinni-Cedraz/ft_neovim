@@ -3,8 +3,7 @@ Keymap("n", "<leader>w", "<cmd>w<CR>") -- Save
 Keymap("n", "<leader>q", "<cmd>wq<CR>") -- Save and quit
 Keymap("n", "<leader>bq", "<cmd>bd<CR>") -- Buffer quit
 Keymap("n", "<leader>nh", "<cmd>nohl<CR>") -- Clears every highlight
-Keymap("n", "<leader>g", "gg=G", { silent = true }) -- Fix indentation in current buffer
-vim.keymap.set("n", "<leader>g", "gg=G")
+Keymap("n", "<leader>g", "gg=G", { silent = true }) -- push all indentation to position zero at left
 
 -- Move Lines
 Keymap("v", "<C-j>", ":m '>+1<CR>gv=gv") -- CTRL + j in visual mode moves every line selected down
