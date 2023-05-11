@@ -3,9 +3,9 @@ local site_dir = vim.fn.expand("~/.local/share/nvim/site")
 -- Spawn a background job to delete the site (from Packer plugin manager) directory.
 -- this will avoid issues if the user has used Packer before this setup with lazy.nvim
 vim.defer_fn(function()
-  if vim.loop.fs_stat(site_dir) then
-    vim.fn.system({ "rm", "-rf", site_dir })
-  end
+	if vim.loop.fs_stat(site_dir) then
+		vim.fn.system({ "rm", "-rf", site_dir })
+	end
 end, 0)
 
 -- PLUGIN MANAGER SETUP
@@ -24,7 +24,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 require("core.options")
-require('lazy').setup("plugins")
+require('lazy').setup("plugins", { lazy = true })
 
 -- CONFIG MODULES FOR EACH PLUGIN
 require("user.treesitter")

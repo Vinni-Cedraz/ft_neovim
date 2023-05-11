@@ -47,7 +47,7 @@ return {
 	{ "onsails/lspkind.nvim" },
 	{ "jose-elias-alvarez/null-ls.nvim" },
 	{ "nvim-telescope/telescope-fzf-native.nvim" },
-	{ "nvim-treesitter/nvim-treesitter" },
+	{ "nvim-treesitter/nvim-treesitter", lazy=false },
 	{ "williamboman/mason.nvim" },
 	{ "goolord/alpha-nvim" },
 	{ "mbbill/undotree" },
