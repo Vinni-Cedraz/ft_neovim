@@ -5,7 +5,7 @@ local servers = {
 	"bashls",
 }
 
-local settings = {
+require("mason").setup({
 	ui = {
 		border = "none",
 		icons = {
@@ -15,10 +15,8 @@ local settings = {
 		},
 	},
 	max_concurrent_installers = 4,
-}
+})
 
-require("lspconfig").robotframework_ls.setup({})
-require("mason").setup(settings)
 require("mason-lspconfig").setup({
 	ensure_installed = servers,
 	automatic_installation = true,
