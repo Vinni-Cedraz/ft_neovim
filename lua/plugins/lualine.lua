@@ -27,7 +27,7 @@ end
 return {
 	"nvim-lualine/lualine.nvim",
 	lazy = true,
-	event = "InsertEnter",
+	event = "CursorMoved",
 	config = function()
 		require('lualine').setup({
 			options = {
