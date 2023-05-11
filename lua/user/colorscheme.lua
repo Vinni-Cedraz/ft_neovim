@@ -54,6 +54,7 @@ if config_file ~= nil then
 
 	if scheme ~= nil then
 		M.Set_color_scheme(":colorscheme " .. scheme)
+		M.Set_color_scheme(":colorscheme " .. scheme)
 	end
 end
 
