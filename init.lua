@@ -23,19 +23,20 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
-require('lazy').setup("plugins", { lazy = true })
+
+-- TOP BE LOADED FIRST:
+require('lazy').setup("plugins")
 require("core.set_transparency")
 require("core.colorscheme")
-require("core.options")
 
-
--- CONFIG MODULES FOR EACH PLUGIN
+-- CONFIG MODULES TO BE LOADED:
 require("user.alpha")
-require("user.autocommands")
 require("telescope").load_extension("projects")
-require("user.nvim-tree")
 require("user.keymaps")
 require("user.lsp")
+require("user.options")
 require("user.floaterm")
-require("user.cmp")
+require("user.autocommands")
 require("user.dap")
+require("user.cmp")
+require("user.nvim-tree")
