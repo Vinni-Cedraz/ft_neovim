@@ -33,6 +33,19 @@ function M.Next_color_scheme()
 	M.Set_color_scheme(M.Colorschemes[M.current_scheme_index])
 end
 
+function M.Prev_color_scheme()
+	-- Decrement the current color scheme index
+	M.current_scheme_index = M.current_scheme_index - 1
+
+	-- If the index is less than 1, reset it to the number of color schemes
+	if M.current_scheme_index < 1 then
+		M.current_scheme_index = #M.Colorschemes
+	end
+
+	-- Set the previous color scheme
+	M.Set_color_scheme(M.Colorschemes[M.current_scheme_index])
+end
+
 -- Set the default colorscheme
 local config_file = io.open(vim.env.HOME .. "/.config/nvim/colorscheme", "r")
 if config_file ~= nil then
@@ -62,6 +75,14 @@ vim.api.nvim_set_keymap(
 	"n",
 	"<M-1>",
 	":lua require('user.colorscheme').Next_color_scheme()<CR>",
+	{ noremap = true, silent = true }
+)
+
+-- Define the keymap to cycle through the available color schemes
+vim.api.nvim_set_keymap(
+	"n",
+	"<M-2>",
+	":lua require('user.colorscheme').Prev_color_scheme()<CR>",
 	{ noremap = true, silent = true }
 )
 
