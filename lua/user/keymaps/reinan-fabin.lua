@@ -21,4 +21,4 @@ Keymap("n", "<leader>tn", ":tabn<CR>") -- Next tab
 Keymap("n", "<leader>tN", ":tabp<CR>") -- Prev tab
 
 -- 42 header
-vim.keymap.set("n", "<leader>h", ":Stdheader<CR>")
+vim.keymap.set("n", "<leader>h", ":Lazy load 42header<CR> <bar> :Stdheader<CR>")
