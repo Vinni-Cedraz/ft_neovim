@@ -75,7 +75,7 @@ M.Colorschemes = {
 vim.api.nvim_set_keymap(
 	"n",
 	"<M-1>",
-	":lua require('user.colorscheme').Next_color_scheme()<CR>",
+	":lua require('core.colorscheme').Next_color_scheme()<CR>",
 	{ noremap = true, silent = true }
 )
 
@@ -83,7 +83,7 @@ vim.api.nvim_set_keymap(
 vim.api.nvim_set_keymap(
 	"n",
 	"<M-2>",
-	":lua require('user.colorscheme').Prev_color_scheme()<CR>",
+	":lua require('core.colorscheme').Prev_color_scheme()<CR>",
 	{ noremap = true, silent = true }
 )
 

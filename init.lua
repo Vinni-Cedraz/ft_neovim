@@ -23,15 +23,14 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
-require("core.options")
 require('lazy').setup("plugins", { lazy = true })
+require("core.set_transparency")
+require("core.colorscheme")
+require("core.options")
 
 -- CONFIG MODULES FOR EACH PLUGIN
-require("user.treesitter")
 require("user.alpha")
 require("user.autocommands")
-require("user.set_transparency")
-require("user.colorscheme")
 require("telescope").load_extension("projects")
 require("user.nvim-tree")
 require("user.keymaps")
