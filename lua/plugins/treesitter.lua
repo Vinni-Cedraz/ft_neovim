@@ -1,5 +1,7 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
+	lazy = false,
+	priority = 1,
 	config = function()
 		require("nvim-treesitter.configs").setup({
 			ensure_installed = { "lua", "c", "bash", "markdown", "markdown_inline", "javascript" },

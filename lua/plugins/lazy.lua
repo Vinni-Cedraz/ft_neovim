@@ -2,6 +2,7 @@ return {
 	-- colorschemes:
 	{
 		"catppuccin/nvim",
+		lazy = true,
 		config = function()
 			require("catppuccin").setup({
 				transparent_background = true,
@@ -11,6 +12,7 @@ return {
 	},
 	{
 		"EdenEast/nightfox.nvim",
+		lazy = true,
 		config = function()
 			require("nightfox").setup({
 				options = {
@@ -21,6 +23,7 @@ return {
 	},
 	{
 		"rose-pine/neovim",
+		lazy = true,
 		config = function()
 			require("rose-pine").setup({
 				disable_background = true,
@@ -30,6 +33,7 @@ return {
 	},
 	{
 		"folke/tokyonight.nvim",
+		lazy = true,
 		config = function()
 			require("tokyonight").setup({
 				transparent = true,
@@ -39,34 +43,36 @@ return {
 			})
 		end,
 	},
-	{ "rebelot/kanagawa.nvim" },
+	{ "rebelot/kanagawa.nvim", lazy=true},
+	{ "ChristianChiarulli/nvcode-color-schemes.vim", lazy=true},
 	-- other plugins
-	{ "ChristianChiarulli/nvcode-color-schemes.vim" },
-	{ "nvim-lua/plenary.nvim" },
-	{ "kyazdani42/nvim-web-devicons" },
-	{ "onsails/lspkind.nvim" },
-	{ "jose-elias-alvarez/null-ls.nvim" },
-	{ "nvim-telescope/telescope-fzf-native.nvim" },
+	{ "nvim-lua/plenary.nvim", lazy=true},
+	{ "kyazdani42/nvim-web-devicons", lazy=true},
+	{ "onsails/lspkind.nvim", lazy=true},
+	{ "jose-elias-alvarez/null-ls.nvim", lazy=true},
+	{ "nvim-telescope/telescope-fzf-native.nvim", lazy=true},
 	{ "nvim-treesitter/nvim-treesitter", lazy=false },
-	{ "williamboman/mason.nvim" },
-	{ "goolord/alpha-nvim" },
-	{ "mbbill/undotree" },
-	{ "kyazdani42/nvim-tree.lua", commit = "7282f7de8aedf861fe0162a559fc2b214383c51c" },
-	{ "nvim-telescope/telescope.nvim" },
-	{ "voldikss/vim-floaterm" },
-	{ "moll/vim-bbye" },
-	{ "cacharle/c_formatter_42.vim" },
-	{ "42paris/42header" },
-	{ "hrsh7th/nvim-cmp" },
-	{ "hrsh7th/cmp-buffer" },
-	{ "hrsh7th/cmp-path" },
-	{ "hrsh7th/cmp-nvim-lsp" },
-	{ "hrsh7th/cmp-nvim-lua" },
-	{ "williamboman/nvim-lsp-installer" },
-	{ "neovim/nvim-lspconfig" },
-	{ "williamboman/mason-lspconfig.nvim" },
+	{ "williamboman/mason.nvim", lazy=true},
+	{ "goolord/alpha-nvim", lazy=true},
+	{ "mbbill/undotree", lazy=true},
+	{ "kyazdani42/nvim-tree.lua", lazy=true, commit = "7282f7de8aedf861fe0162a559fc2b214383c51c"},
+	{ "nvim-telescope/telescope.nvim", lazy=true},
+	{ "voldikss/vim-floaterm", lazy=true},
+	{ "moll/vim-bbye", lazy=true},
+	{ "cacharle/c_formatter_42.vim", lazy=true},
+	{ "42paris/42header", lazy=true},
+	{ "hrsh7th/nvim-cmp", lazy=true},
+	{ "hrsh7th/cmp-buffer", lazy=true},
+	{ "hrsh7th/cmp-path", lazy=true},
+	{ "hrsh7th/cmp-nvim-lsp", lazy=true},
+	{ "hrsh7th/cmp-nvim-lua", lazy=true},
+	{ "williamboman/nvim-lsp-installer", lazy=true},
+	{ "neovim/nvim-lspconfig", lazy=true},
+	{ "williamboman/mason-lspconfig.nvim", lazy=true},
 	{
 		"glepnir/lspsaga.nvim",
+		lazy = true,
+		event = "LspAttach",
 		config = function()
 			require("lspsaga").setup({})
 		end,
@@ -74,14 +80,15 @@ return {
 	{
 		"zbirenbaum/copilot-cmp",
 		commit = "b732a58ac8b7287b981cd9f0d9c0f61e5e9d5760",
+		lazy=true,
 		config = function()
 			require("copilot_cmp").setup({
 				method = "getcompletionscycling",
 			})
 		end,
 	},
-	{ "mfussenegger/nvim-dap" },
-	{ "rcarriga/nvim-dap-ui" },
-	{ "ravenxrz/DAPInstall.nvim" },
-	{ "numToStr/Comment.nvim" },
+	{ "mfussenegger/nvim-dap", lazy=true},
+	{ "rcarriga/nvim-dap-ui", lazy=true},
+	{ "ravenxrz/DAPInstall.nvim", lazy=true},
+	{ "numToStr/Comment.nvim", lazy=true},
 }

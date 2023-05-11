@@ -1,5 +1,6 @@
 return {
 	"zbirenbaum/copilot.lua",
+	lazy = true,
 	config = function()
 		require("copilot").setup({
 			filetypes = { "lua", "c", "javascript", "typescript", "rust", "python" },

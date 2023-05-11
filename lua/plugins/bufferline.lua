@@ -1,5 +1,6 @@
 return {
 	"akinsho/bufferline.nvim",
+	event = "BufHidden",
 	config = function()
 		require("bufferline").setup({
 			options = {
