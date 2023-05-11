@@ -1,5 +1,4 @@
 return {
-	-- colorschemes:
 	{
 		"catppuccin/nvim",
 		lazy = true,
@@ -58,14 +57,9 @@ return {
 	{ "kyazdani42/nvim-tree.lua", lazy=true, commit = "7282f7de8aedf861fe0162a559fc2b214383c51c"},
 	{ "nvim-telescope/telescope.nvim", lazy=true},
 	{ "voldikss/vim-floaterm", lazy=true},
-	{ "moll/vim-bbye", lazy=true},
+	{ "moll/vim-bbye", lazy=true, event = "BufHidden"},
 	{ "cacharle/c_formatter_42.vim", lazy=true},
-	{ "42paris/42header", lazy=true},
-	{ "hrsh7th/nvim-cmp", lazy=true},
-	{ "hrsh7th/cmp-buffer", lazy=true},
-	{ "hrsh7th/cmp-path", lazy=true},
-	{ "hrsh7th/cmp-nvim-lsp", lazy=true},
-	{ "hrsh7th/cmp-nvim-lua", lazy=true},
+	{ "42paris/42header", lazy=true },
 	{ "williamboman/nvim-lsp-installer", lazy=true},
 	{ "neovim/nvim-lspconfig", lazy=true},
 	{ "williamboman/mason-lspconfig.nvim", lazy=true},
@@ -77,10 +71,16 @@ return {
 			require("lspsaga").setup({})
 		end,
 	},
+	{ "hrsh7th/nvim-cmp", lazy=true, event = "InsertCharPre" },
+	{ "hrsh7th/cmp-buffer", lazy=true, event = "InsertCharPre" },
+	{ "hrsh7th/cmp-path", lazy=true, event = "InsertCharPre" },
+	{ "hrsh7th/cmp-nvim-lsp", lazy=true, event = "InsertCharPre" },
+	{ "hrsh7th/cmp-nvim-lua", lazy=true, event = "InsertCharPre"  },
 	{
 		"zbirenbaum/copilot-cmp",
 		commit = "b732a58ac8b7287b981cd9f0d9c0f61e5e9d5760",
 		lazy=true,
+		event = "InsertCharPre",
 		config = function()
 			require("copilot_cmp").setup({
 				method = "getcompletionscycling",
