@@ -2,7 +2,7 @@ Keymap = vim.keymap.set
 Opts = { silent = true }
 
 -- load and use 42header plugin and norminetter:
-Keymap("n", "<F1>", ":Lazy load 42header<CR> <bar> :Stdheader<CR>")
+Keymap("n", "<F1>", ":Lazy load 42header<CR> | :Stdheader<CR>")
 
 -- set leader key to space
 Keymap("", "<Space>", "<Nop>", Opts)
@@ -17,13 +17,14 @@ Keymap("n", "<S-x>", ":x<CR>", Opts)
 Keymap("n", "<S-r>", ":redo<CR>", Opts)
 Keymap("n", "<C-q>", ":qa!<cr>", Opts)
 Keymap("n", "<leader>a", "<cmd>lua vim.lsp.buf.code_action()<CR>", Opts) -- code action
-Keymap("n", "<F3>", ":Lazy load undotree<CR> <bar> :UndotreeToggle<CR>")
+Keymap("n", "`", ":Lazy load undotree<CR> | :UndotreeToggle<CR>", Opts)
+Keymap("n", "<leader>u", ":Lazy load undotree<CR> | :UndotreeToggle<CR>", Opts)
 
 -- Comment Code
 Keymap(
 	"n",
 	"<leader>/",
-	":Lazy load Comment.nvim<CR> <bar> <cmd>lua require('Comment.api').toggle.linewise.current()<CR>",
+	":Lazy load Comment.nvim<CR> | <cmd>lua require('Comment.api').toggle.linewise.current()<CR>",
 	Opts
 )
 Keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>')
@@ -43,7 +44,7 @@ Keymap(
 )
 
 -- Telescope
-Keymap("n", "<leader>ff", ":Lazy load telescope-fzf-native.nvim<CR> <bar> :Telescope find_files<CR>", Opts)
+Keymap("n", "<leader>ff", ":Lazy load telescope-fzf-native.nvim<CR> | :Telescope find_files<CR>", Opts)
 Keymap("n", "<leader>fh", ":Telescope find_files cwd=~/ <CR>", Opts)
 Keymap("n", "<leader>fr", ":Telescope find_files cwd=/ <CR>", Opts)
 Keymap("n", "<leader>fp", ":Telescope projects<CR>", Opts)
