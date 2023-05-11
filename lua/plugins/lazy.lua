@@ -1,10 +1,47 @@
 return {
-	{ "catppuccin/nvim" },
-	{ "EdenEast/nightfox.nvim" },
-	{ "rose-pine/neovim" },
-	{ "folke/tokyonight.nvim" },
-	{ "ChristianChiarulli/nvcode-color-schemes.vim" },
+	-- colorschemes:
+	{
+		"catppuccin/nvim",
+		config = function()
+			require("catppuccin").setup({
+				transparent_background = true,
+				no_italic = true, -- Force no italic
+			})
+		end,
+	},
+	{
+		"EdenEast/nightfox.nvim",
+		config = function()
+			require("nightfox").setup({
+				options = {
+					transparent = true,
+				},
+			})
+		end,
+	},
+	{
+		"rose-pine/neovim",
+		config = function()
+			require("rose-pine").setup({
+				disable_background = true,
+				disable_float_background = true,
+			})
+		end,
+	},
+	{
+		"folke/tokyonight.nvim",
+		config = function()
+			require("tokyonight").setup({
+				transparent = true,
+				colors = {
+					bg_float = "none",
+				},
+			})
+		end,
+	},
 	{ "rebelot/kanagawa.nvim" },
+	-- other plugins
+	{ "ChristianChiarulli/nvcode-color-schemes.vim" },
 	{ "nvim-lua/plenary.nvim" },
 	{ "kyazdani42/nvim-web-devicons" },
 	{ "onsails/lspkind.nvim" },
