@@ -65,7 +65,6 @@ return {
 		pattern = "*.c,*.h",
 	},
 	{ "42paris/42header", lazy = true },
-	{ "williamboman/nvim-lsp-installer", lazy = true },
 	{ "neovim/nvim-lspconfig", lazy = true },
 	{ "williamboman/mason-lspconfig.nvim", lazy = true },
 	{
