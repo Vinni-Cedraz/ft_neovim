@@ -1,6 +1,9 @@
 Keymap = vim.keymap.set
 Opts = { silent = true }
 
+-- load and use 42header plugin and norminetter:
+Keymap("n", "<F1>", ":Lazy load 42header<CR> <bar> :Stdheader<CR>")
+
 -- set leader key to space
 Keymap("", "<Space>", "<Nop>", Opts)
 
