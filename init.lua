@@ -28,6 +28,7 @@ require("core.set_transparency")
 require("core.colorscheme")
 require("core.options")
 
+
 -- CONFIG MODULES FOR EACH PLUGIN
 require("user.alpha")
 require("user.autocommands")
