@@ -17,10 +17,15 @@ Keymap("n", "<S-x>", ":x<CR>", Opts)
 Keymap("n", "<S-r>", ":redo<CR>", Opts)
 Keymap("n", "<C-q>", ":qa!<cr>", Opts)
 Keymap("n", "<leader>a", "<cmd>lua vim.lsp.buf.code_action()<CR>", Opts) -- code action
-Keymap("n", "<F3>", ":UndotreeToggle<CR>", Opts)
+Keymap("n", "<F3>", ":Lazy load undotree<CR> <bar> :UndotreeToggle<CR>")
 
 -- Comment Code
-Keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle.linewise.current()<CR>", Opts)
+Keymap(
+	"n",
+	"<leader>/",
+	":Lazy load Comment.nvim<CR> <bar> <cmd>lua require('Comment.api').toggle.linewise.current()<CR>",
+	Opts
+)
 Keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>')
 
 -- Floaterm
@@ -30,12 +35,17 @@ Keymap(
 	":FloatermNew --height=0.6 --width=0.4 --wintype=float --position=topleft --cwd=<buffer><CR>",
 	Opts
 )
-Keymap("n", "<leader>cc", ":FloatermNew --autoclose=0 cc -g -Wall -Wextra -Werror -fsanitize=address -lm % -o %< && ./%< <CR>", Opts)
+Keymap(
+	"n",
+	"<leader>cc",
+	":FloatermNew --autoclose=0 cc -g -Wall -Wextra -Werror -fsanitize=address -lm % -o %< && ./%< <CR>",
+	Opts
+)
 
 -- Telescope
+Keymap("n", "<leader>ff", ":Lazy load telescope-fzf-native.nvim<CR> <bar> :Telescope find_files<CR>", Opts)
 Keymap("n", "<leader>fh", ":Telescope find_files cwd=~/ <CR>", Opts)
 Keymap("n", "<leader>fr", ":Telescope find_files cwd=/ <CR>", Opts)
-Keymap("n", "<leader>ff", ":Telescope find_files<CR>", Opts)
 Keymap("n", "<leader>fp", ":Telescope projects<CR>", Opts)
 Keymap("n", "<leader>lg", ":Telescope live_grep<CR>", Opts)
 

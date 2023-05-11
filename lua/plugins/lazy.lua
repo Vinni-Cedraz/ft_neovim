@@ -47,7 +47,7 @@ return {
 	-- other plugins
 	{ "nvim-lua/plenary.nvim", lazy = true },
 	{ "kyazdani42/nvim-web-devicons", lazy = true },
-	{ "onsails/lspkind.nvim", lazy = true },
+	{ "onsails/lspkind.nvim", lazy = true, event = "LspAttach" },
 	{ "jose-elias-alvarez/null-ls.nvim", lazy = true },
 	{ "nvim-telescope/telescope-fzf-native.nvim", lazy = true },
 	{ "nvim-treesitter/nvim-treesitter", lazy = false },
