@@ -1,48 +1,36 @@
-local options = {
-	backup = false, -- creates a backup file
-	clipboard = "unnamedplus", -- allows neovim to access the system clipboard
-	cmdheight = 2, -- more space in the neovim command line for displaying messages
-	completeopt = { "menuone", "noselect" }, -- mostly just for cmp
-	conceallevel = 0, -- so that `` is visible in markdown files
-	fileencoding = "utf-8", -- the encoding written to a file
-	hlsearch = false, -- highlight all matches on previous search pattern
-	ignorecase = true, -- ignore case in search patterns
-	incsearch = true, -- show search matches incrementally
-	mouse = "a", -- allow the mouse to be used in neovim
-	pumheight = 10, -- pop up menu height
-	showmode = false, -- we don't need to see things like -- INSERT -- anymore
-	smartcase = true, -- smart case
-	smartindent = true, -- make indenting smarter again
-	splitbelow = true, -- force all horizontal splits to go below current window
-	splitright = true, -- force all vertical splits to go to the right of current window
-	swapfile = false, -- creates a swapfile
-	termguicolors = true, -- set term gui colors (most terminals support this)
-	timeoutlen = 300, -- time to wait for a mapped sequence to complete (in milliseconds)
-	undofile = true, -- enable persistent undo
-	undodir = os.getenv("HOME") .. "/.local/share/nvim/undo",
-	updatetime = 50, -- faster completion (4000ms default)
-	expandtab = false, -- convert tabs to spaces
-	shiftwidth = 4, -- the number of spaces inserted for each indentation
-	tabstop = 4, -- insert 4 spaces for a tab
-	-- cursorline = true, -- highlight the current line
-	number = true, -- set numbered lines
-	relativenumber = true, -- set relative numbered lines
-	numberwidth = 4, -- set number column width to 2 {default 4}
-	signcolumn = "yes", -- always show the sign column, otherwise it would shift the text each time
-	wrap = false, -- display lines as one long line
-	linebreak = true, -- companion to wrap, don't split words
-	scrolloff = 8, -- minimal number of screen lines to keep above and below the cursor
-	sidescrolloff = 8, -- minimal number of screen columns either side of cursor if wrap is `false`
-	guifont = "monospace:h17", -- the font used in graphical neovim applications
-	winblend = 0,
-	pumblend = 0,
-}
-
-vim.opt.shortmess:append("c")
-
-for k, v in pairs(options) do
-	vim.opt[k] = v
-end
-
-vim.cmd("set whichwrap+=<,>,[,],h,l")
-vim.cmd([[set iskeyword+=-]])
+vim.o.backup = false                         -- creates a backup file
+vim.o.clipboard = "unnamedplus"              -- allows neovim to access the system clipboard
+vim.o.cmdheight = 2                          -- more space in the neovim command line for displaying messages
+vim.o.conceallevel = 0                       -- so that `` is visible in markdown files
+vim.o.fileencoding = "utf-8"                 -- the encoding written to a file
+vim.o.hlsearch = false                       -- highlight all matches on previous search pattern
+vim.o.ignorecase = true                      -- ignore case in search patterns
+vim.o.incsearch = true                       -- show search matches incrementally
+vim.o.mouse = "a"                            -- allow the mouse to be used in neovim
+vim.o.pumheight = 10                         -- pop up menu height
+vim.o.showmode = false                       -- we don't need to see things like -- INSERT -- anymore
+vim.o.smartcase = true                       -- smart case
+vim.o.smartindent = true                     -- make indenting smarter again
+vim.o.splitbelow = true                      -- force all horizontal splits to go below current window
+vim.o.splitright = true                      -- force all vertical splits to go to the right of current window
+vim.o.swapfile = false                       -- creates a swapfile
+vim.o.termguicolors = true                   -- set term gui colors (most terminals support this)
+vim.o.timeoutlen = 300                       -- time to wait for a mapped sequence to complete (in milliseconds)
+vim.o.undofile = true                        -- enable persistent undo
+vim.o.undodir = os.getenv("HOME") .. "/.local/share/nvim/undo"
+vim.o.updatetime = 50                        -- faster completion (4000ms default)
+vim.o.expandtab = false                      -- convert tabs to spaces
+vim.o.shiftwidth = 4                         -- the number of spaces inserted for each indentation
+vim.o.tabstop = 4                            -- insert 4 spaces for a tab
+vim.o.cursorline = true                      -- highlight the current line
+vim.o.number = true                          -- set numbered lines
+vim.o.relativenumber = true                  -- set relative numbered lines
+vim.o.numberwidth = 4                        -- set number column width to 2 {default 4}
+vim.o.signcolumn = "yes"                     -- always show the sign column otherwise it would shift the text each time
+vim.o.wrap = false                           -- display lines as one long line
+vim.o.linebreak = true                       -- companion to wrap don't split words
+vim.o.scrolloff = 8                          -- minimal number of screen lines to keep above and below the cursor
+vim.o.sidescrolloff = 8                      -- minimal number of screen columns either side of cursor if wrap is `false`
+vim.o.guifont = "monospace:h17"              -- the font used in graphical neovim applications
+vim.o.winblend = 0
+vim.o.pumblend = 0
