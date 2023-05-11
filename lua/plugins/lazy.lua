@@ -47,9 +47,7 @@ return {
 	{ "onsails/lspkind.nvim" },
 	{ "jose-elias-alvarez/null-ls.nvim" },
 	{ "nvim-telescope/telescope-fzf-native.nvim" },
-	{ "ahmedkhalf/project.nvim" },
 	{ "nvim-treesitter/nvim-treesitter" },
-	{ "akinsho/bufferline.nvim", commit = "83bf4dc7bff642e145c8b4547aa596803a8b4dc4" },
 	{ "williamboman/mason.nvim" },
 	{ "goolord/alpha-nvim" },
 	{ "mbbill/undotree" },
@@ -57,7 +55,6 @@ return {
 	{ "nvim-telescope/telescope.nvim" },
 	{ "voldikss/vim-floaterm" },
 	{ "moll/vim-bbye" },
-	{ "nvim-lualine/lualine.nvim" },
 	{ "cacharle/c_formatter_42.vim" },
 	{ "42paris/42header" },
 	{ "hrsh7th/nvim-cmp" },
@@ -74,7 +71,6 @@ return {
 			require("lspsaga").setup({})
 		end,
 	},
-	{ "zbirenbaum/copilot.lua" },
 	{
 		"zbirenbaum/copilot-cmp",
 		commit = "b732a58ac8b7287b981cd9f0d9c0f61e5e9d5760",
