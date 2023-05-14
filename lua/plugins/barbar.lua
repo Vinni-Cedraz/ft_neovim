@@ -14,10 +14,10 @@ return {
 				changed = { enabled = true, icon = "~" },
 				deleted = { enabled = true, icon = "-" },
 			},
-		},
-		sidebar_filetypes = {
-			NvimTree = { text = "NvimTree" },
-			undotree = { text = "Undotree" },
+			sidebar_filetypes = {
+				NvimTree = { text = "NvimTree" },
+				undotree = { text = "Undotree" },
+			},
 		},
 		Event = "VeryLazy"
 	},
