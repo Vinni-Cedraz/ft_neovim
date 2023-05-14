@@ -17,6 +17,9 @@ return {
 				options = {
 					transparent = true,
 				},
+				overrides = {
+					Normal = { bg = "None" },
+				},
 			})
 		end,
 	},
@@ -25,6 +28,7 @@ return {
 		lazy = true,
 		config = function()
 			require("rose-pine").setup({
+				disable_italics = true,
 				disable_background = true,
 				disable_float_background = true,
 			})
@@ -36,14 +40,44 @@ return {
 		config = function()
 			require("tokyonight").setup({
 				transparent = true,
-				colors = {
-					bg_float = "none",
+				styles = {
+					comments = { italic = false },
+					keywords = { italic = false },
+					functions = {},
+					variables = {},
+					-- Background styles. Can be "dark", "transparent" or "normal"
+					sidebars = "transparent", -- style for sidebars, see below
+					floats = "transparent", -- style for floating windows
 				},
 			})
 		end,
 	},
-	{ "rebelot/kanagawa.nvim", lazy = true },
-	{ "ChristianChiarulli/nvcode-color-schemes.vim", lazy = true },
+	{
+		"rebelot/kanagawa.nvim",
+		lazy = true,
+		opts = {
+			colors = {
+				pallette = {},
+				theme = {
+					wave = {},
+					lotus = {},
+					dragon = {},
+					all = {
+						ui = {
+							bg_gutter = "none",
+						},
+					},
+				},
+			},
+		},
+	},
+	{
+		"Mofiqul/dracula.nvim",
+		lazy = true,
+		opts = {
+			transparent_bg = true,
+		},
+	},
 	-- other plugins
 	{ "nvim-lua/plenary.nvim", lazy = true },
 	{ "kyazdani42/nvim-web-devicons", lazy = true },
@@ -53,10 +87,18 @@ return {
 	{ "nvim-treesitter/nvim-treesitter", lazy = false },
 	{ "williamboman/mason.nvim", lazy = true },
 	{ "goolord/alpha-nvim", lazy = true },
-	{ "mbbill/undotree", lazy = true, cmd = "UndotreeToggle"},
-	{ "kyazdani42/nvim-tree.lua", lazy = true, commit = "7282f7de8aedf861fe0162a559fc2b214383c51c" },
-	{ "nvim-telescope/telescope.nvim", lazy = true },
-	{ "voldikss/vim-floaterm", lazy = false, priority = 2000},
+	{ "mbbill/undotree", lazy = true, cmd = "UndotreeToggle" },
+	{
+		"kyazdani42/nvim-tree.lua",
+		lazy = true,
+		commit = "7282f7de8aedf861fe0162a559fc2b214383c51c",
+	},
+	{
+		"nvim-telescope/telescope.nvim",
+		lazy = true,
+		Opts = {},
+	},
+	{ "voldikss/vim-floaterm", lazy = false, priority = 2000 },
 	{ "moll/vim-bbye", lazy = true, event = "BufHidden" },
 	{
 		"cacharle/c_formatter_42.vim",
