@@ -1,5 +1,5 @@
 Keymap = vim.keymap.set
-Opts = { silent = true}
+Opts = { silent = true }
 
 -- load and use 42header plugin and norminetter:
 Keymap("n", "<F1>", ":Lazy load 42header<CR> | :Stdheader<CR>")
@@ -17,8 +17,6 @@ Keymap("n", "<S-x>", ":x<CR>", Opts)
 Keymap("n", "<S-r>", ":redo<CR>", Opts)
 Keymap("n", "<C-q>", ":qa!<cr>", Opts)
 Keymap("n", "<leader>a", "<cmd>lua vim.lsp.buf.code_action()<CR>", Opts) -- code action
-Keymap("n", "`", ":Lazy load undotree<CR> | :UndotreeToggle<CR>", Opts)
-Keymap("n", "<leader>u", ":Lazy load undotree<CR> | :UndotreeToggle<CR>", Opts)
 
 -- Comment Code
 Keymap(
@@ -27,6 +25,7 @@ Keymap(
 	":Lazy load Comment.nvim<CR> | <cmd>lua require('Comment.api').toggle.linewise.current()<CR>",
 	Opts
 )
+
 Keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>')
 
 -- Floaterm
@@ -36,6 +35,7 @@ Keymap(
 	":FloatermNew --height=0.6 --width=0.4 --wintype=float --position=topleft --cwd=<buffer><CR>",
 	Opts
 )
+
 Keymap(
 	"n",
 	"<leader>cc",

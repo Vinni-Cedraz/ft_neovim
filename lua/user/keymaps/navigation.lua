@@ -6,7 +6,7 @@ Keymap("n", "<C-l>", "<C-w>l", Opts)
 
 -- Navigate Buffers
 Keymap("n", "<leader>e", ":NvimTreeToggle<CR>", Opts)
-Keymap("n", "<S-q>", ":q<CR>", { noremap = true })
+Keymap("n", "<S-q>", ":q<CR>", { noremap = true }, { silent = true })
 
 -- Navigate File
 Keymap("n", "<C-d>", "<C-d>zz", Opts)
@@ -18,8 +18,7 @@ Keymap("n", "<S-l>", "<Cmd>BufferNext<CR>", Opts)
 Keymap("n", "<S-t>", "<Cmd>BufferClose!<CR>", Opts)
 Keymap("n", "<C-S-M-h>", "<Cmd>BufferMovePrevious<CR>", Opts)
 Keymap("n", "<C-S-M-l>", "<Cmd>BufferMoveNext<CR>", Opts)
-Keymap("n", "<C-Z>", "<Cmd>BufferLast<CR>", Opts)
-Keymap("n", "<C-P>", "<Cmd>BufferPin<CR>", Opts)
+Keymap("n", "<C-S-M-P>", "<Cmd>BufferPin<CR>", Opts)
 Keymap("n", "<leader>x", "<Cmd>BufferCloseAllButCurrentOrPinned<CR>", Opts)
 Keymap("n", "<leader>p", "<Cmd>BufferPick<CR>", Opts) -- Magic buffer-picking mode
 Keymap("n", "<leader>bb", "<Cmd>BufferOrderByBufferNumber<CR>", Opts) -- Sort automatically by...
