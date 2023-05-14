@@ -68,6 +68,7 @@ M.Colorschemes = {
 	"habamax",
 	"tokyonight",
 	"dracula",
+	-- "dracula-soft",
 	"kanagawa",
 }
 
