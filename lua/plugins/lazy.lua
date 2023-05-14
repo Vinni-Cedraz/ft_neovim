@@ -53,7 +53,7 @@ return {
 	{ "nvim-treesitter/nvim-treesitter", lazy = false },
 	{ "williamboman/mason.nvim", lazy = true },
 	{ "goolord/alpha-nvim", lazy = true },
-	{ "mbbill/undotree", lazy = true },
+	{ "mbbill/undotree", lazy = true, cmd = "UndotreeToggle"},
 	{ "kyazdani42/nvim-tree.lua", lazy = true, commit = "7282f7de8aedf861fe0162a559fc2b214383c51c" },
 	{ "nvim-telescope/telescope.nvim", lazy = true },
 	{ "voldikss/vim-floaterm", lazy = false, priority = 2000},

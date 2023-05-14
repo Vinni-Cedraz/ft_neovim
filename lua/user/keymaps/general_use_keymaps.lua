@@ -1,5 +1,5 @@
 Keymap = vim.keymap.set
-Opts = { silent = true }
+Opts = { silent = true}
 
 -- load and use 42header plugin and norminetter:
 Keymap("n", "<F1>", ":Lazy load 42header<CR> | :Stdheader<CR>")
