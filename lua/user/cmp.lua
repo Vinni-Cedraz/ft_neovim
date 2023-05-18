@@ -100,4 +100,7 @@ cmp.setup({
 		completion = cmp.config.window.bordered(),
 		documentation = cmp.config.window.bordered(),
 	},
+	ghost_text = {
+		hl_group = "Comment",
+	},
 })
