@@ -4,8 +4,6 @@ Keymap("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", { noremap = true 
 -- Text Object Manipulation
 Keymap("n", "J", "mzJ`z", Opts)
 Keymap("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/]], Opts)
--- Keymap("v", ">", ">gv", Opts) -- indents deeper
--- Keymap("v", "<", "<gv", Opts) -- undo indentation
 
 -- Go Crazy
 Keymap(
@@ -24,12 +22,4 @@ Keymap(
 		.. vim.fn.system("echo " .. vim.fn.shellescape(vim.fn.expand("~/.config/nvim/my_google.clang-format")))
 		.. "<CR>",
 	{ silent = true }
-)
-
--- floating to-do list
-Keymap(
-	"n",
-	"<leader>td",
-	":lua require('user.floating_todo_list').open_floating_todo_list()<CR>",
-	Opts
 )

@@ -43,6 +43,13 @@ Keymap(
 	Opts
 )
 
+Keymap(
+	"n",
+	"<leader>js",
+	":FloatermNew --autoclose=0 node %< <CR>",
+	Opts
+)
+
 -- Telescope
 Keymap("n", "<leader>ff", ":Lazy load telescope-fzf-native.nvim<CR> | :Telescope find_files<CR>", Opts)
 Keymap("n", "<leader>fh", ":Telescope find_files cwd=~/ <CR>", Opts)
