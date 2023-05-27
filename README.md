@@ -1,4 +1,3 @@
-# README DESATUALIZADO
 
 # ft_neovim
 
@@ -7,15 +6,10 @@
 # Setup:
 - adicione ~/.local/ e ~/.local/bin ao seu PATH para não ter problemas com o norminetador
 - clone o repositório dentro do seu ~/.config em um diretório chamado nvim
-- rode o programa com nvim e digite `:PackerSync` e aperte enter
-- quando o Packer terminar de instalar os plugins, saia do programa, abra de novo e aguarde as instalações do treesiter
-- ao finalizar as instalações do treesitter digite :Mason e verifique se clangd e lua-language-server foram instalados corretamente
-- rode o comando :PackerSync de novo caso a instalação de algum plugin tenha falhado na primeira vez
-- **Pronto, esse procedimento só precisa ser feito na primeira vez.**
-- **Depois disso é esperado que o ft_neovim inicialize instantaneamente quando vc rodar o neovim:**
-
+- rode o programa
+- quando o Lazy terminar de instalar os plugins, aguarde as instalações do treesiter
+- ao finalizar as instalações do treesitter digite :Mason e verifique se clangd, lua-language-server e etc foram instalados corretamente (aproveite pra entender como o Mason funciona)
 ![image](https://user-images.githubusercontent.com/92558763/222973781-3447be7d-9f7f-4478-b9cf-2f634586b991.png)
-
 A imagem de fundo é o meu wallpaper, o ft_neovim é transparente por default, mas isso depende das configurações do seu terminal.
 Aqui vai uma lista de terminais que suportam transparência:
 - terminator
@@ -57,7 +51,7 @@ Os keymaps estão separados em arquivos por tópico. Sugiro começar pelo genera
 - gf em cima do nome de uma função te leva para o arquivo que recebe o mesmo nome da função (se ele existir)
 - gd em cima do nome de uma função te leva para o lugar onde a função foi definida, mesmo se for em outro arquivo, em alguns casos pode bugar e te levar pra prototipação em vez da definição, aí vc tenta com gf
 - espaço + rn renomeia todas as instâncias de uma função que aparecerem no teu projeto (do diretório atual para baixo!)
-
+- espaço + js executa o codigo javascript do arquivo atual em uma janela de terminal flutuante.
 
 ## Mais sobre como usar:
 Todos os plugins utilizados tem mais funcionalidades do que aquelas eu eu mapeei e sei utilizar
