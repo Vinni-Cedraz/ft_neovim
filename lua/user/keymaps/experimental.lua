@@ -19,7 +19,7 @@ Keymap(
 	"n",
 	"<leader>c",
 	":%!clang-format --style=file:"
-		.. vim.fn.system("echo " .. vim.fn.shellescape(vim.fn.expand("~/.config/nvim/my_google.clang-format")))
+		.. vim.fn.system("echo " .. vim.fn.shellescape(vim.fn.expand("~/.config/nvim/my_llvm.clang-format")))
 		.. "<CR>",
 	{ silent = true }
 )
