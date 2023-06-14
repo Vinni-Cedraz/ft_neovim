@@ -1,8 +1,6 @@
 
 # ft_neovim
 
-- atenção: Isso foi testado apenas em ambientes Linux (Ubuntu, Arch, Alpine, Debian)
-
 # Setup:
 - adicione ~/.local/ e ~/.local/bin ao seu PATH para não ter problemas com o norminetador
 - clone o repositório dentro do seu ~/.config em um diretório chamado nvim
@@ -25,10 +23,12 @@ Aqui vai uma lista de terminais que suportam transparência:
 
 - Neovim 8.0 ++
 - coisas que com quase toda certeza você já tem: git, curl or wget, unzip, tar, gzip, gcc or clang, make, libstdc++ 
+- coisas que talvez vc precise instalar antes:
 - ripgrep (github.com/BurntSushi/ripgrep) --> para a funcionalidade live grep do telescope
 - Nerd-Fonts
-- npm versão 16 --> (para o copilot e talvez outros plugins tbm)
+- npm versão 16 --> (para o copilot e varios outros plugins)
 - python3-pip --> (para o norminetador automático)
+- python3.10-venv --> se vc quiser instalar e usar clang-format e outros (:MasonInstall clang-format)
 
 ## Sem paciência de instalar os pré-requisitos? Está em uma máquina com o ambiente meio bugado? 
 Então roda com Docker: https://github.com/Vinni-Cedraz/ubuntu_22.04_container.git
