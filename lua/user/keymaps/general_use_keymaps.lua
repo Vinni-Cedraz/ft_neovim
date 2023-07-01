@@ -43,12 +43,8 @@ Keymap(
 	Opts
 )
 
-Keymap(
-	"n",
-	"<leader>js",
-	":FloatermNew --autoclose=0 node %< <CR>",
-	Opts
-)
+Keymap("n", "<leader>j", ":%!prettier --stdin-filepath %<CR>", Opts)
+Keymap("n", "<leader>js", ":FloatermNew --autoclose=0 node %< <CR>", Opts)
 
 -- Telescope
 Keymap("n", "<leader>ff", ":Lazy load telescope-fzf-native.nvim<CR> | :Telescope find_files<CR>", Opts)
