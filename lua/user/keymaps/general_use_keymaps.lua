@@ -56,7 +56,7 @@ Keymap("n", "<leader>lg", ":Telescope live_grep<CR>", Opts)
 
 -- Copillot
 Keymap("i", "CP", "<ESC><CMD>:Copilot panel<CR>", Opts)
-Keymap("n", "<ESC>", "<CMD>:Copilot toggle<CR>", Opts)
+Keymap("n", "<leader>cp", "<CMD>:Copilot toggle<CR> | <CMD>:Copilot status<CR>", Opts)
 
 -- Blackhole register
 Keymap("v", "p", '"_dP', Opts)
