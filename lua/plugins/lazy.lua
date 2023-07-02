@@ -1,4 +1,5 @@
 return {
+	-- colorschemes:
 	{
 		"catppuccin/nvim",
 		lazy = true,
@@ -78,11 +79,12 @@ return {
 			transparent_bg = true,
 		},
 	},
-	-- other plugins
+	-- utilities:
 	{ "nvim-lua/plenary.nvim", lazy = true },
 	{ "kyazdani42/nvim-web-devicons", lazy = true },
 	{ "onsails/lspkind.nvim", lazy = true, event = "LspAttach" },
 	{ "jose-elias-alvarez/null-ls.nvim", lazy = true },
+	{ "nvim-telescope/telescope-fzf-native.nvim", lazy = true },
 	{ "nvim-treesitter/nvim-treesitter", lazy = false },
 	{ "williamboman/mason.nvim", lazy = true },
 	{ "goolord/alpha-nvim", lazy = true },
