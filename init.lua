@@ -32,6 +32,7 @@ require("core.colorscheme")
 -- CONFIG MODULES TO BE LOADED:
 require("user.alpha")
 require("telescope").load_extension("projects")
+pcall(require('telescope').load_extension, 'fzf')
 require("user.keymaps")
 require("user.lsp")
 require("user.options")
