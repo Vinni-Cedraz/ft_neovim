@@ -3,7 +3,6 @@ return {
 	branch = "master",
 	dependencies = { "nvim-lua/plenary.nvim" },
 	config = function()
-		-- See `:help telescope` and `:help telescope.setup()`
 		require("telescope").setup({
 			defaults = {
 				mappings = {
