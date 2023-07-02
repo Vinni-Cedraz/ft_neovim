@@ -2,7 +2,7 @@ local cmd = vim.cmd
 local create_autocmd = vim.api.nvim_create_autocmd
 -- this one enables dap helptags
 cmd([[autocmd BufEnter * silent! helptags ALL]])
-cmd("command! Hello echo 'Hello, World!'")
+cmd("command! Hello echo 'Hello, ' . $USER")
 cmd("nnoremap <silent> - :Hello<CR>")
 
 -- the following autocommand executes :set suffixesadd=.c/.h everytime a .c/.h file is opened
