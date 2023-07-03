@@ -8,7 +8,7 @@ return {
 	build = ":TSUpdate",
 	config = function()
 		require("nvim-treesitter.configs").setup({
-			ensure_installed = { "lua", "c", "bash", "markdown", "markdown_inline", "javascript", "dart" },
+			ensure_installed = { "lua", "c", "markdown", "markdown_inline", "javascript", "dart" },
 			ignore_install = { "" },
 			sync_install = true,
 			highlight = {
