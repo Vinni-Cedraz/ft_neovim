@@ -1,4 +1,4 @@
--- Navigate Windows
+-- Navigate Tabs
 Keymap("n", "<C-h>", "<C-w>h", Opts)
 Keymap("n", "<C-j>", "<C-w>j", Opts)
 Keymap("n", "<C-k>", "<C-w>k", Opts)
@@ -6,11 +6,6 @@ Keymap("n", "<C-l>", "<C-w>l", Opts)
 
 -- Navigate Buffers
 Keymap("n", "<leader>e", ":NvimTreeToggle<CR>", Opts)
-Keymap("n", "<S-q>", ":q<CR>", { noremap = true }, { silent = true })
-
--- Navigate File
-Keymap("n", "<C-d>", "<C-d>zz", Opts)
-Keymap("n", "<C-u>", "<C-u>zz", Opts)
 
 -- Navigate Tabs
 Keymap("n", "<S-h>", "<Cmd>BufferPrevious<CR>", Opts)
