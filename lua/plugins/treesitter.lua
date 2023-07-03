@@ -23,8 +23,8 @@ return {
 			incremental_selection = {
 				enable = true,
 				keymaps = {
-					init_selection = "<S-p>", -- c here means C like in Ctrl
-					node_incremental = "<S-p>",
+					init_selection = "<S-u>", -- c here means C like in Ctrl
+					node_incremental = "<S-u>",
 				},
 			},
 		})

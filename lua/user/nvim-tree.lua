@@ -35,10 +35,10 @@ nvim_tree.setup({
 				git = {
 					unstaged = "",
 					staged = "S",
-					unmerged = "",
-					renamed = "➜",
+					unmerged = " ",
+					renamed = "➜ ",
 					untracked = "U",
-					deleted = "",
+					deleted = " ",
 					ignored = "◌",
 				},
 			},
@@ -48,10 +48,10 @@ nvim_tree.setup({
 		enable = true,
 		show_on_dirs = true,
 		icons = {
-			hint = "",
-			info = "",
-			warning = "",
-			error = "",
+			hint = " ",
+			info = " ",
+			warning = " ",
+			error = " ",
 		},
 	},
 	view = {
