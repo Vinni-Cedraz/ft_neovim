@@ -18,6 +18,12 @@ Keymap("n", "rr", ":redo<CR>", Opts)
 -- map replace mode to <C-r>
 Keymap("n", "<C-q>", ":qa!<cr>", Opts)
 Keymap("n", "<leader>a", "<cmd>lua vim.lsp.buf.code_action()<CR>", Opts) -- code action
+Keymap("n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", Opts)
+Keymap("n", "<leader>f", "<cmd>lua vim.lsp.buf.format()<CR>", Opts)
+Keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", Opts)
+Keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", Opts)
+Keymap("n", "<leader>j", "<cmd>lua vim.diagnostic.goto_next({buffer=0})<CR>", Opts)
+Keymap("n", "<leader>k", "<cmd>lua vim.diagnostic.goto_prev({buffer=0})<CR>", Opts)
 
 -- Comment Code
 Keymap(
