@@ -14,7 +14,7 @@ Keymap("i", "kj", "<ESC>", Opts)
 -- Essentials
 Keymap("n", "<S-w>", ":w<CR>", Opts)
 Keymap("n", "<S-x>", ":x<CR>", Opts)
-Keymap("n", "<leader>r", ":redo<CR>", Opts)
+Keymap("n", "rr", ":redo<CR>", Opts)
 -- map replace mode to <C-r>
 Keymap("n", "<C-q>", ":qa!<cr>", Opts)
 Keymap("n", "<leader>a", "<cmd>lua vim.lsp.buf.code_action()<CR>", Opts) -- code action
