@@ -7,25 +7,26 @@ Keymap(
 )
 
 -- compiles a "modular" .c file and executes the resulting binary in a floating window
+-- it can take an argument from the user:
 Keymap(
 	"n",
 	"<leader>cc",
-	":FloatermNew --autoclose=0 cc -g -Wall -Wextra -Werror -fsanitize=address -lm % -o %< && ./%< <CR>",
+    ":let input = input('Enter an argument: ') | :execute 'FloatermNew --autoclose=0 cc -g -Wall -Wextra -Werror -fsanitize=address -lm % -o %< && ./%< '.input <CR>",
 	Opts
 )
 
--- takes the current .js or .ts file and runs is with node on a floating window
+-- executes the current js/ts or dart file in a floating window
+-- it can take an argument from the user:
 Keymap(
-	"n",
-	"<leader>js",
-	":FloatermNew --autoclose=0 node % <CR>",
-	Opts
+    "n",
+    "<leader>js",
+    ":let input = input('Enter an argument: ') | :execute 'FloatermNew --autoclose=0 node % '.input <CR>",
+    Opts
 )
 
--- takes the current .dart file and runs it on a floating window
 Keymap(
-	"n",
-	"<leader>dt",
-	":FloatermNew --autoclose=0 dart % <CR>",
-	Opts
+    "n",
+    "<leader>dt",
+    ":let input = input('Enter an argument: ') | :execute 'FloatermNew --autoclose=0 dart % '.input <CR>",
+    Opts
 )
