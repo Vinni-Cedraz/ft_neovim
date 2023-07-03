@@ -1,8 +1,11 @@
 return {
 	"zbirenbaum/copilot.lua",
+
+	-- these two here means copilot will only be start once the user enters the :Copilot status command
 	lazy = true,
-	event = "LspAttach",
-	cmd = "Copilot status",
+	cmd = "Copilot",
+	-- either manually or through the <leader>cp keymap
+
 	config = function()
 		require("copilot").setup({
 			filetypes = {

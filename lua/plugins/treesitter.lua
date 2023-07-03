@@ -13,17 +13,15 @@ return {
 			sync_install = true,
 			highlight = {
 				enable = true,
-				disable = { "css" },
 				use_languagetree = true,
 			},
 			autopairs = {
 				enable = true,
 			},
-			indent = { enable = true },
 			incremental_selection = {
 				enable = true,
 				keymaps = {
-					init_selection = "<S-u>", -- c here means C like in Ctrl
+					init_selection = "<S-u>",
 					node_incremental = "<S-u>",
 				},
 			},
