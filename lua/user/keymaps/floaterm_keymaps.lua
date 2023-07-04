@@ -20,7 +20,7 @@ Keymap(
 Keymap(
     "n",
     "<leader>js",
-    ":let input = input('Enter an argument: ') | :execute 'FloatermNew --autoclose=0 node % '.input <CR>",
+    ":FloatermNew --autoclose=0 node % <CR>",
     Opts
 )
 
