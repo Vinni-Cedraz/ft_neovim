@@ -1,0 +1,12 @@
+-- Tweak saturation: >
+chan_add('saturation', 20,  { filter = 'fg' })
+chan_set('saturation', { 10, 90 }, { filter = 'fg' })
+
+-- Tweak hue: >
+  -- Create monochromatic variant (this uses green color)
+  chan_set('hue', 135)
+  -- Create dichromatic variant (this uses Neovim-themed hues)
+  chan_set('hue', { 140, 245 })
+
+-- Feeling Lucky
+ chan_modify('hue', function() return math.random(0, 359) end)

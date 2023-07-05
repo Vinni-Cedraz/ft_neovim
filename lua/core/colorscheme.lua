@@ -62,11 +62,9 @@ M.Colorschemes = {
 	"rose-pine",
 	"carbonfox",
 	"terafox",
-	"nightfox",
 	"catppuccin-frappe",
-	"habamax",
 	"tokyonight",
-	"dracula-soft",
+	"dracula",
 	"kanagawa",
 }
 

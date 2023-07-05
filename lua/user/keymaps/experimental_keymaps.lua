@@ -30,3 +30,5 @@ Keymap("n", "<leader>-", "<C-x>") -- Decrements value in cursor
 
 -- experimental normal mode keymap that makes more sense to me when my hand is in proper typing position
 Keymap("i", "kl", "<ESC>", Opts)
+
+Keymap("n", "mini", ":lua require('mini.colors').interactive()<CR>", Opts)
