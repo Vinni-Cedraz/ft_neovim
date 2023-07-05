@@ -2,9 +2,6 @@ return {
 	"nvim-treesitter/nvim-treesitter",
 	lazy = false,
 	priority = 1,
-	dependencies = {
-		"nvim-treesitter/nvim-treesitter-textobjects",
-	},
 	build = ":TSUpdate",
 	config = function()
 		require("nvim-treesitter.configs").setup({
@@ -17,13 +14,6 @@ return {
 			},
 			autopairs = {
 				enable = true,
-			},
-			incremental_selection = {
-				enable = true,
-				keymaps = {
-					init_selection = "<S-u>",
-					node_incremental = "<S-u>",
-				},
 			},
 		})
 	end,
