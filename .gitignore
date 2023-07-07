@@ -1,4 +1,5 @@
 lua/plugins/custom_*.lua
-lua/user/custom_*.lua
+lua/user/custom_options.lua
 lazy-lock.json
-colors
+colors/
+rename_me_for_special_colors/
