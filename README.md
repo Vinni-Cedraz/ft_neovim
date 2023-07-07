@@ -78,8 +78,8 @@ Os keymaps estão separados em arquivos por tópico. Sugiro começar pelo genera
 ## Como mudar as configuracoes de options do neovim:
 - Se vc quiser mudar os options, (por exemplo o numero de espacos de um tab ou a
   existencia de um barra de cor na coluna 80 etc), voce pode tbm.
-- Basta criar um arquivo chamado custom_options.lua no diretorio lua/user/ e
-  adicionar nele todas as mudancas que vc quiser
+- Basta editar o arquivo chamado custom_options.lua que existe dentro do
+  diretorio lua/user/ e adicionar nele todas as mudancas que vc quiser.
 
 ###  Atencao:
 - Qualquer alteracao feita por voce que nao esteja dentro do diretorio plugins/
