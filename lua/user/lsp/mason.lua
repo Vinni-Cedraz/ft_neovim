@@ -1,7 +1,6 @@
 local servers = {
 	"clangd",
 	"lua_ls",
-	"bashls",
 }
 
 require("mason").setup({
