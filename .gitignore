@@ -1,3 +1,4 @@
 lua/plugins/custom_*.lua
+lua/user/custom_*.lua
 lazy-lock.json
 colors/

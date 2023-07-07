@@ -25,7 +25,7 @@ vim.o.tabstop = 4 -- insert 4 spaces for a tab
 vim.o.cursorline = true -- highlight the current line
 vim.o.number = true -- set numbered lines
 vim.o.relativenumber = true -- set relative numbered lines
-vim.o.numberwidth = 4 -- set number column width to 2 {default 4}
+vim.o.numberwidth = 2 -- set number column width to 2 {default 4}
 vim.o.signcolumn = "yes" -- always show the sign column otherwise it would shift the text each time
 vim.o.wrap = false -- display lines as one long line
 vim.o.linebreak = true -- companion to wrap don't split words
@@ -34,5 +34,6 @@ vim.o.sidescrolloff = 8 -- minimal number of screen columns either side of curso
 vim.o.guifont = "monospace:h17" -- the font used in graphical neovim applications
 vim.o.winblend = 0
 vim.o.pumblend = 0
+vim.o.textwidth = 80
 
 vim.api.nvim_set_hl(0, "TelescopeNormal", { bg = "none" })
