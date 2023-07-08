@@ -5,25 +5,29 @@ end
 
 local dashboard = require("alpha.themes.dashboard")
 dashboard.section.header.val = {
-    [[                                                                                                               ]],
-    [[                                                                                                               ]],
-    [[                                                                                                               ]],
-    [[                                                                                                               ]],
-    [[        /_/_/_/_/  /_/_/_/_/_/  /_/       /_/  /_/_/_/_/    /_/_/    /_/      /_/  /_/_/_/   /_/       /_/     ]],
-    [[       /_/            /_/      /_//_/    /_/  /_/        /_/    /_/  /_/    /_/     /_/     /_//_/  /_/_/      ]],
-    [[      /_/_/_/        /_/      /_/  /_/  /_/  /_/_/_/    /_/    /_/  /_/    /_/     /_/     /_/  /_/  /_/       ]],
-    [[     /_/            /_/      /_/    /_//_/  /_/        /_/    /_/    /_/ /_/      /_/     /_/       /_/        ]],
-    [[    /_/            /_/_/_/_//_/      /_/   /_/_/_/_/    /_/_/        /_/       /_/_/_/   /_/       /_/         ]],
-    [[                                                                                                               ]],
-    [[                                                                                                               ]],
-    [[                                                                                                               ]],
-    [[                                               THIN, LIGHT, FAST!                                              ]],
-    [[                                                                                                               ]],
+	[[                                                                                                               ]],
+	[[                                                                                                               ]],
+	[[                                                                                                               ]],
+	[[                                                                                                               ]],
+	[[        /_/_/_/_/  /_/_/_/_/_/  /_/       /_/  /_/_/_/_/    /_/_/    /_/      /_/  /_/_/_/   /_/       /_/     ]],
+	[[       /_/            /_/      /_//_/    /_/  /_/        /_/    /_/  /_/    /_/     /_/     /_//_/  /_/_/      ]],
+	[[      /_/_/_/        /_/      /_/  /_/  /_/  /_/_/_/    /_/    /_/  /_/    /_/     /_/     /_/  /_/  /_/       ]],
+	[[     /_/            /_/      /_/    /_//_/  /_/        /_/    /_/    /_/ /_/      /_/     /_/       /_/        ]],
+	[[    /_/            /_/_/_/_//_/      /_/   /_/_/_/_/    /_/_/        /_/       /_/_/_/   /_/       /_/         ]],
+	[[                                                                                                               ]],
+	[[                                                                                                               ]],
+	[[                                                                                                               ]],
+	[[                                               THIN, LIGHT, FAST!                                              ]],
+	[[                                                                                                               ]],
 }
 
 dashboard.section.buttons.val = {
 	dashboard.button("r", "󱑔 " .. " Recent files", ":Telescope oldfiles <CR>"),
-	dashboard.button("u", " " .. " Update ft_neovim", ":FloatermNew --autoclose=0 git -C $HOME/.config/nvim restore . | git -C $HOME/.config/nvim pull<CR>"),
+	dashboard.button(
+		"u",
+		" " .. " Update ft_neovim",
+		':FloatermNew --autoclose=0 git -C $HOME/.config/nvim ls-files -z | grep -vz custom_ | xargs -0 -I {} sh -c "git -C $HOME/.config/nvim restore {}" | git -C $HOME/.config/nvim pull<CR>'
+	),
 	dashboard.button("f", " " .. " Find file", ":Telescope find_files <CR>"),
 	dashboard.button("t", " " .. " Find text", ":Telescope live_grep <CR>"),
 	dashboard.button("c", " " .. " Config", ":e ~/.config/nvim/lua/user/options.lua<CR>"),
