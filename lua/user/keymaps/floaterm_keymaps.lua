@@ -30,3 +30,10 @@ Keymap(
     ":let input = input('Enter an argument: ') | :execute 'FloatermNew --autoclose=0 dart % '.input <CR>",
     Opts
 )
+
+Keymap(
+    "n",
+    "<leader>mk",
+    ":FloatermNew --autoclose=0 make<CR>",
+    Opts
+)
