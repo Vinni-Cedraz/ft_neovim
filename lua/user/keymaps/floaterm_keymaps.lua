@@ -1,7 +1,7 @@
 -- opens float term
 Keymap(
 	"n",
-	"<leader>ft",
+	"<M-i>",
 	":FloatermNew --height=0.6 --width=0.4 --wintype=float --position=topleft --cwd=<buffer><CR>",
 	Opts
 )
