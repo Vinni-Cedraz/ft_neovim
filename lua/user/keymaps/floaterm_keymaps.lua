@@ -1,9 +1,19 @@
--- opens float term
+local hasFloaterm = false
+
+function FloatermToggle()
+  if hasFloaterm then
+    vim.cmd('FloatermToggle')
+  else
+    vim.cmd('FloatermNew --height=0.6 --width=0.4 --wintype=float --position=topleft')
+    hasFloaterm = true
+  end
+end
+
 Keymap(
-	"n",
-	"<M-i>",
-	":FloatermNew --height=0.6 --width=0.4 --wintype=float --position=topleft --cwd=<buffer><CR>",
-	Opts
+  {"n","t"},
+  "<M-i>",
+  "<CMD>lua FloatermToggle()<CR>",
+  Opts
 )
 
 -- compiles a "modular" .c file and executes the resulting binary in a floating window
