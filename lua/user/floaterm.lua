@@ -8,6 +8,6 @@ vim.g.floaterm_borderchars = "─│─│┌┐┘└"
 -- if floaterm is opening with a vanilla 'sh' shell instead of your shell of
 -- choice, uncomment one of the following lines:
 
--- vim.g.floaterm_shell = "zsh"
+vim.g.floaterm_shell = "zsh"
 -- vim.g.floaterm_shell = "fish"
 -- vim.g.floaterm_shell = "bash"
