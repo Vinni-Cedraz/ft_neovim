@@ -15,3 +15,8 @@ Keymap("n", "<leader>S", function()
 		previewer = false,
 	}))
 end, { desc = "Fuzzily [S]earch in current buffer" })
+
+Keymap("n", "mob", function()
+	require("telescope").load_extension("flutter")
+	require('telescope').extensions.flutter.commands()
+end, { desc = "opens flutter tools commands" })
