@@ -1,3 +1,4 @@
+local vim = vim
 local site_dir = vim.fn.expand("~/.local/share/nvim/site")
 
 -- Spawn a background job to delete the site (from Packer plugin manager) directory.

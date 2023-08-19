@@ -17,9 +17,6 @@ Keymap(
 	{ silent = true }
 )
 
--- File and Buffer Related
-Keymap("n", "<leader>g", "gg=G", { silent = true }) -- push all indentation to position zero at left
-
 -- Move Lines
 Keymap("v", "<C-j>", ":m '>+1<CR>gv=gv") -- CTRL + j in visual mode moves every line selected down
 Keymap("v", "<C-k>", ":m '<-2<CR>gv=gv") -- CTRL + k in visual mode moves every line selected up

@@ -1,8 +1,6 @@
 -- DAP
 Keymap("n", "<F5>", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", Opts)
 Keymap("n", "<F6>", "<cmd>lua require'dap'.continue()<cr>", Opts)
-Keymap("n", "<leader>di", "<cmd>lua require'dap'.step_into()<cr>", Opts)
-Keymap("n", "<leader>do", "<cmd>lua require'dap'.step_over()<cr>", Opts)
 Keymap("n", "<F4>", "<cmd>lua require'dap'.step_out()<cr>", Opts)
 Keymap("n", "<leader>dr", "<cmd>lua require'dap'.repl.toggle()<cr>", Opts)
 Keymap("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<cr>", Opts)

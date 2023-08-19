@@ -40,6 +40,7 @@
   "telescope.nvim": { "branch": "master", "commit": "d2e17ba18a6840b7e7079764b282616c3188e0de" },
   "tokyonight.nvim": { "branch": "main", "commit": "1ee11019f8a81dac989ae1db1a013e3d582e2033" },
   "undotree": { "branch": "master", "commit": "0e11ba7325efbbb3f3bebe06213afa3e7ec75131" },
+  "vgit.nvim": { "branch": "main", "commit": "a62ad74471b3612de68a5e78a893b867eb33332e" },
   "vim-bbye": { "branch": "master", "commit": "25ef93ac5a87526111f43e5110675032dbcacf56" },
   "vim-floaterm": { "branch": "master", "commit": "bcaeabf89a92a924031d471395054d84bd88ce2f" }
 }
