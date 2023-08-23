@@ -96,12 +96,6 @@ return {
 	},
 	{ "voldikss/vim-floaterm", lazy = false, priority = 2000 },
 	{ "moll/vim-bbye", lazy = true, event = "BufHidden" },
-	{
-		"cacharle/c_formatter_42.vim",
-		lazy = true,
-		event = "BufRead",
-		pattern = "*.c,*.h",
-	},
 	{ "42paris/42header", lazy = true },
 	{ "neovim/nvim-lspconfig", lazy = true },
 	{ "williamboman/mason-lspconfig.nvim", lazy = true },
