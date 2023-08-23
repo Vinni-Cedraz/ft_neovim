@@ -1,5 +1,4 @@
 local servers = {
-	"clangd",
 	"lua_ls",
 }
 
