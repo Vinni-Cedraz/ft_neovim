@@ -59,13 +59,12 @@ end
 
 -- Define the available color schemes
 M.Colorschemes = {
-	"rose-pine",
-	"carbonfox",
-	"terafox",
-	"catppuccin-frappe",
-	"tokyonight",
-	"dracula",
-	"kanagawa",
+    "rose-pine-dawn",
+    "catppuccin-latte",
+    "dawnfox",
+    "dayfox",
+    "kanagawa-lotus",
+    "tokyonight-day",
 }
 
 -- Define the keymap to cycle through the available color schemes
