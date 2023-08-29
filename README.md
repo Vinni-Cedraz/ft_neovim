@@ -21,6 +21,9 @@ Aqui vai uma lista de terminais que suportam transparência:
 - Tilix
 - Xfce Terminal
 
+### Se vc usa terminais com temas claros baixe essa outra branch aqui do ft_neovim:
+```git clone --branch=bright_themes git@github.com:Vinni-Cedraz/ft_neovim.git ~/.config/nvim```
+
 # pre-requisitos:
 
 - Neovim 8.0 ++
