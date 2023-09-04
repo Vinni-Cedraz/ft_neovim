@@ -34,6 +34,5 @@ vim.o.sidescrolloff = 8 -- minimal number of screen columns either side of curso
 vim.o.guifont = "monospace:h17" -- the font used in graphical neovim applications
 vim.o.winblend = 0
 vim.o.pumblend = 0
-vim.o.textwidth = 80
 
 vim.api.nvim_set_hl(0, "TelescopeNormal", { bg = "none" })
