@@ -19,6 +19,6 @@ return {
 				undotree = { text = "Undotree" },
 			},
 		},
-		Event = "VeryLazy"
+		event = "VeryLazy"
 	},
 }
