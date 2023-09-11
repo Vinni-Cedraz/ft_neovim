@@ -54,7 +54,7 @@ create_autocmd({ "VimEnter" }, {
 	end,
 })
 
-create_autocmd({ "BufRead,BufNewFile" }, {
+create_autocmd({ "BufRead" }, {
 	pattern = { "*.log" },
 	callback = function()
 		cmd("term tail -f -n +1 %")
