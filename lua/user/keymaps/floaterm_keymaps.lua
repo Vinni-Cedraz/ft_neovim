@@ -21,7 +21,7 @@ Keymap(
 Keymap(
 	"n",
 	"<leader>cc",
-    ":let input = input('Enter an argument: ') | :execute 'FloatermNew --autoclose=0 cc -g -Wall -Wextra -Werror -fsanitize=address -lm % -o %< && ./%< '.input <CR>",
+    ":let input = input('Enter an argument: ') | :execute 'FloatermNew --autoclose=0 cc -g -Wall -Wextra -Werror -fsanitize=address -lm -lcriterion -I/usr/include/ % -o %< /usr/lib/minirt.a && ./%< --verbose'.input <CR> && rm -f %<",
 	Opts
 )
 
