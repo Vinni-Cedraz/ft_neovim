@@ -54,11 +54,10 @@ create_autocmd({ "VimEnter" }, {
 	end,
 })
 
-create_autocmd({ "BufRead,BufNewFile" }, {
+create_autocmd({ "BufRead" }, {
 	pattern = { "*.log" },
 	callback = function()
 		cmd("term tail -f -n +1 %")
 		vim.api.nvim_buf_set_keymap(0, 't', 'i', '<Nop>', { silent = true, nowait = true })
 	end,
 })
-
