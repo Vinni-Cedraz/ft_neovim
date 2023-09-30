@@ -21,7 +21,14 @@ Keymap(
 Keymap(
 	"n",
 	"<leader>cc",
-    ":let input = input('Enter an argument: ') | :execute 'FloatermNew --autoclose=0 cc -g -Wall -Wextra -Werror -fsanitize=address -lm -lcriterion -I/usr/include/ % -o %< /usr/lib/minirt.a && ./%< --verbose'.input <CR> && rm -f %<",
+ 	":let input = input('Enter an argument: ') | :execute 'FloatermNew --autoclose=0 cc -g -Wall -Wextra -Werror -lm  -I$HOME/MiniRT/include/ -I$HOME/MiniRT/libs/ % -o %< $HOME/MiniRT/minirt.a && ./%< '.input <CR>",
+	Opts
+)
+
+Keymap(
+	"n",
+	"test",
+	":FloatermNew --autoclose=0 cc -g -Wall -Wextra -Werror -lm -lcriterion -I$HOME/MiniRT/include/ -I$HOME/MiniRT/libs/ % -o %< $HOME/MiniRT/minirt.a && ./%< --verbose <CR>",
 	Opts
 )
 
