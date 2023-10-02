@@ -1,4 +1,6 @@
 local cmp_status_ok, cmp = pcall(require, "cmp")
+local lspkind = require('lspkind')
+local luasnip = require('luasnip')
 if not cmp_status_ok then
 	return
 end
@@ -40,40 +42,51 @@ local kind_icons = {
 	Copilot = vim.fn.nr2char(0xe708),
 }
 
-cmp.setup({
+cmp.setup {
+}
+cmp.setup {
 	snippet = {
-		expand = function() end,
+		expand = function(args)
+			luasnip.lsp_expand(args.body)
+		end,
+	},
+	window = {
+		completion = cmp.config.window.bordered(),
+		documentation = cmp.config.window.bordered(),
 	},
 	mapping = cmp.mapping.preset.insert({
-		["<C-right>"] = cmp.mapping.confirm({
-			select = true,
+		['<C-u>'] = cmp.mapping.scroll_docs(-4), -- Up
+		['<C-d>'] = cmp.mapping.scroll_docs(4), -- Down
+		-- C-b (back) C-f (forward) for snippet placeholder navigation.
+		['<C-Space>'] = cmp.mapping.complete(),
+		['<CR>'] = cmp.mapping.confirm {
 			behavior = cmp.ConfirmBehavior.Replace,
-		}),
-		["<C-down>"] = cmp.mapping(function(fallback)
+			select = true,
+		},
+		['<Tab>'] = cmp.mapping(function(fallback)
 			if cmp.visible() then
 				cmp.select_next_item()
-			elseif check_backspace() then
-				fallback()
+			elseif luasnip.expand_or_jumpable() then
+				luasnip.expand_or_jump()
 			else
 				fallback()
 			end
-		end, {
-			"i",
-			"s",
-		}),
-		["<C-up>"] = cmp.mapping(function(fallback)
+		end, { 'i', 's' }),
+		['<S-Tab>'] = cmp.mapping(function(fallback)
 			if cmp.visible() then
 				cmp.select_prev_item()
+			elseif luasnip.jumpable(-1) then
+				luasnip.jump(-1)
 			else
 				fallback()
 			end
-		end, {
-			"i",
-			"s",
-		}),
+		end, { 'i', 's' }),
 	}),
+	sources = {
+		{ name = 'nvim_lsp' },
+		{ name = 'luasnip' },
+	},
 	formatting = {
-		fields = { "kind", "abbr", "menu" },
 		format = function(entry, vim_item)
 			vim_item.kind = kind_icons[vim_item.kind]
 			vim_item.menu = ({
@@ -85,22 +98,5 @@ cmp.setup({
 			})[entry.source.name]
 			return vim_item
 		end,
-	},
-	sources = {
-		{ name = "nvim_lsp" },
-		{ name = "nvim_lua" },
-		{ name = "buffer" },
-		{ name = "path" },
-		{ name = "copilot" },
-	},
-	confirm_opts = {
-		select = false,
-	},
-	window = {
-		completion = cmp.config.window.bordered(),
-		documentation = cmp.config.window.bordered(),
-	},
-	ghost_text = {
-		hl_group = "Comment",
-	},
-})
+	}
+}

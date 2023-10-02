@@ -80,30 +80,30 @@ return {
 		},
 	},
 	-- utilities:
-	{ "nvim-lua/plenary.nvim", lazy = true },
-	{ "kyazdani42/nvim-web-devicons", lazy = true },
-	{ "onsails/lspkind.nvim", lazy = true, event = "LspAttach" },
-	{ "jose-elias-alvarez/null-ls.nvim", lazy = true },
+	{ "nvim-lua/plenary.nvim",                    lazy = true },
+	{ "kyazdani42/nvim-web-devicons",             lazy = true },
+	{ "onsails/lspkind.nvim",                     lazy = true, event = "LspAttach" },
+	{ "jose-elias-alvarez/null-ls.nvim",          lazy = true },
 	{ "nvim-telescope/telescope-fzf-native.nvim", lazy = true },
-	{ "nvim-treesitter/nvim-treesitter", lazy = false },
-	{ "williamboman/mason.nvim", lazy = true },
-	{ "goolord/alpha-nvim", lazy = true },
-	{ "mbbill/undotree", lazy = true, cmd = "UndotreeToggle" },
+	{ "nvim-treesitter/nvim-treesitter",          lazy = false },
+	{ "williamboman/mason.nvim",                  lazy = true },
+	{ "goolord/alpha-nvim",                       lazy = true },
+	{ "mbbill/undotree",                          lazy = true, cmd = "UndotreeToggle" },
 	{
 		"kyazdani42/nvim-tree.lua",
 		lazy = true,
 		commit = "7282f7de8aedf861fe0162a559fc2b214383c51c",
 	},
 	{ "voldikss/vim-floaterm", lazy = false, priority = 2000 },
-	{ "moll/vim-bbye", lazy = true, event = "BufHidden" },
+	{ "moll/vim-bbye",         lazy = true,  event = "BufHidden" },
 	{
 		"cacharle/c_formatter_42.vim",
 		lazy = true,
 		event = "BufRead",
 		pattern = "*.c,*.h",
 	},
-	{ "42paris/42header", lazy = true },
-	{ "neovim/nvim-lspconfig", lazy = true },
+	{ "42paris/42header",                  lazy = true },
+	{ "neovim/nvim-lspconfig",             lazy = true },
 	{ "williamboman/mason-lspconfig.nvim", lazy = true },
 	{
 		"glepnir/lspsaga.nvim",
@@ -129,9 +129,9 @@ return {
 			})
 		end,
 	},
-	{ "hrsh7th/nvim-cmp", lazy = true, event = "InsertCharPre" },
-	{ "hrsh7th/cmp-buffer", lazy = true, event = "InsertCharPre" },
-	{ "hrsh7th/cmp-path", lazy = true, event = "InsertCharPre" },
+	{ "hrsh7th/nvim-cmp",     lazy = true, event = "InsertCharPre" },
+	{ "hrsh7th/cmp-buffer",   lazy = true, event = "InsertCharPre" },
+	{ "hrsh7th/cmp-path",     lazy = true, event = "InsertCharPre" },
 	{ "hrsh7th/cmp-nvim-lsp", lazy = true, event = "InsertCharPre" },
 	{ "hrsh7th/cmp-nvim-lua", lazy = true, event = "InsertCharPre" },
 	{
@@ -145,8 +145,15 @@ return {
 			})
 		end,
 	},
-	{ "mfussenegger/nvim-dap", lazy = true },
-	{ "rcarriga/nvim-dap-ui", lazy = true },
+	{ "mfussenegger/nvim-dap",    lazy = true },
+	{ "rcarriga/nvim-dap-ui",     lazy = true },
 	{ "ravenxrz/DAPInstall.nvim", lazy = true },
-	{ "numToStr/Comment.nvim", lazy = true },
+	{ "numToStr/Comment.nvim",    lazy = true },
+	{
+		"L3MON4D3/LuaSnip",
+		-- follow latest release.
+		version = "2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+		-- install jsregexp (optional!).
+		build = "make install_jsregexp"
+	}
 }
