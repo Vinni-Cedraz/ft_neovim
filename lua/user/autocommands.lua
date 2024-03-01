@@ -61,3 +61,39 @@ create_autocmd({ "BufRead" }, {
 		vim.api.nvim_buf_set_keymap(0, 't', 'i', '<Nop>', { silent = true, nowait = true })
 	end,
 })
+
+create_autocmd("BufWritePre", {
+	pattern = "*.py",
+	callback = function()
+		local text = vim.api.nvim_buf_get_lines(0, 0, -1, false)
+		for i, line in ipairs(text) do
+			if #line > 80 then
+				local break_points = {}
+				local is_comment = line:sub(1, 1) == "#"
+				-- Search for break points
+				for j = 80, 1, -1 do
+					local char = line:sub(j, j)
+					if char == " " then
+						table.insert(break_points, j - 1)
+						break
+					end
+				end
+				-- Apply break based on comment status
+				if #break_points > 0 then
+					local break_index = break_points[1]
+					local first_part = line:sub(1, break_index)
+					local second_part = line:sub(break_index + 1)
+					if is_comment then
+						second_part = "#" .. second_part -- Add comment prefix
+					end
+					text[i] = first_part
+					table.insert(text, i + 1, second_part)
+				else -- Hard break
+					table.insert(text, i + 1, line:sub(81))
+					text[i] = line:sub(1, 80)
+				end
+			end
+		end
+		vim.api.nvim_buf_set_lines(0, 0, -1, false, text)
+	end,
+})
