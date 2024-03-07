@@ -37,7 +37,14 @@ Keymap(
 Keymap(
     "n",
     "<leader>js",
-    ":FloatermNew --autoclose=0 node % <CR>",
+    ":let input = input('Enter an argument: ') | :execute 'FloatermNew --autoclose=0 node % '.input <CR>",
+    Opts
+)
+
+Keymap(
+    "n",
+    "<leader>py",
+    ":let input = input('Enter an argument: ') | :execute 'FloatermNew --autoclose=0 python3 % '.input <CR>",
     Opts
 )
 
