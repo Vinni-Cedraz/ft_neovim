@@ -136,7 +136,6 @@ return {
 	{ "hrsh7th/cmp-nvim-lua", lazy = true, event = "InsertCharPre" },
 	{
 		"zbirenbaum/copilot-cmp",
-		commit = "b732a58ac8b7287b981cd9f0d9c0f61e5e9d5760",
 		lazy = true,
 		event = "InsertCharPre",
 		config = function()
