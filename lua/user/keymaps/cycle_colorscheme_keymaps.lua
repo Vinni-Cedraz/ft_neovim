@@ -1,4 +1,4 @@
--- Define the keymap to cycle forward through the available color schemes
+-- Alt + 1: Next colorscheme
 vim.api.nvim_set_keymap(
 	"n",
 	"<M-1>",
@@ -6,7 +6,7 @@ vim.api.nvim_set_keymap(
 	{ noremap = true, silent = true }
 )
 
--- Define the keymap to cycle backwards through the available color schemes
+-- Alt + 2: Previous colorscheme
 vim.api.nvim_set_keymap(
 	"n",
 	"<M-2>",
