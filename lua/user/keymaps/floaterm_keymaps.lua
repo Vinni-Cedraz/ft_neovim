@@ -4,7 +4,7 @@ function FloatermToggle()
   if hasFloaterm then
     vim.cmd('FloatermToggle')
   else
-    vim.cmd('FloatermNew --height=0.5 --width=0.8 --wintype=float --position=bottomright')
+    vim.cmd('FloatermNew --wintype=float --position=bottomright')
     hasFloaterm = true
   end
 end
@@ -21,7 +21,14 @@ Keymap(
 Keymap(
 	"n",
 	"<leader>cc",
- 	":let input = input('Enter an argument: ') | :execute 'FloatermNew --autoclose=0 cc -g -Wall -Wextra -Werror -lm  -I$HOME/MiniRT/include/ -I$HOME/MiniRT/libs/ % -o %< $HOME/MiniRT/minirt.a && ./%< '.input <CR>",
+ 	":let input = input('Enter an argument: ') | :execute 'FloatermNew --autoclose=0 cc -g -Wall -Wextra -Werror % -o %< && ./%< '.input <CR>",
+	Opts
+)
+
+Keymap(
+	"n",
+	"<leader>cpp",
+ 	":let input = input('Enter an argument: ') | :execute 'FloatermNew --autoclose=0 c++ -g -Wall -Wextra -Werror % -o %< && ./%< '.input <CR>",
 	Opts
 )
 
