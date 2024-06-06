@@ -1,7 +1,8 @@
 local servers = {
 	"clangd",
 	"lua_ls",
-	"jedi_language_server"
+	"jedi_language_server",
+	"ast_grep"
 }
 
 require("mason").setup({

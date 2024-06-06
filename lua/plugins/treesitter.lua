@@ -8,7 +8,7 @@ return {
 			ensure_installed = {
 				"lua", "c", "markdown",
 				"markdown_inline", "javascript",
-				"dart", "python"
+				"dart", "python", "cpp"
 			},
 			ignore_install = { "" },
 			sync_install = true,
