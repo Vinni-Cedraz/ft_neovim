@@ -4,16 +4,25 @@ function FloatermToggle()
   if hasFloaterm then
     vim.cmd('FloatermToggle')
   else
-    vim.cmd('FloatermNew --wintype=float --position=bottomright')
+    vim.cmd('FloatermNew --height=0.5 --width=0.5 --wintype=float --position=bottomright')
     hasFloaterm = true
   end
 end
 
+-- Alt + i opens or closes a floating terminal session with zsh running there
 Keymap(
   {"n","t"},
   "<M-i>",
   "<CMD>lua FloatermToggle()<CR>",
   Opts
+)
+
+-- runs make in a floating terminal window in the current buffer
+Keymap(
+    "n",
+    "<leader>mk",
+    ":FloatermNew --autoclose=0 make<CR>",
+    Opts
 )
 
 -- compiles a "modular" .c file and executes the resulting binary in a floating window
@@ -25,6 +34,7 @@ Keymap(
 	Opts
 )
 
+-- same thing but for c++
 Keymap(
 	"n",
 	"<leader>cpp",
@@ -32,15 +42,7 @@ Keymap(
 	Opts
 )
 
-Keymap(
-	"n",
-	"test",
-	":FloatermNew --autoclose=0 cc -g -Wall -Wextra -Werror -lm -lcriterion -I$HOME/MiniRT/include/ -I$HOME/MiniRT/libs/ % -o %< $HOME/MiniRT/minirt.a && ./%< --verbose <CR>",
-	Opts
-)
-
--- executes the current js/ts or dart file in a floating window
--- it can take an argument from the user:
+-- same thing but for node js
 Keymap(
     "n",
     "<leader>js",
@@ -48,6 +50,7 @@ Keymap(
     Opts
 )
 
+-- same thing but for node python
 Keymap(
     "n",
     "<leader>py",
@@ -55,16 +58,10 @@ Keymap(
     Opts
 )
 
+-- same thing but for node dart
 Keymap(
     "n",
     "<leader>dt",
     ":let input = input('Enter an argument: ') | :execute 'FloatermNew --autoclose=0 dart % '.input <CR>",
-    Opts
-)
-
-Keymap(
-    "n",
-    "<leader>mk",
-    ":FloatermNew --autoclose=0 make<CR>",
     Opts
 )

@@ -28,3 +28,10 @@ Keymap(
 -- It doesn't matter if you closed the file before,
 -- it persists until you move it, rename it or delete it):
 Keymap("n", "<F3>", ":UndotreeToggle<CR>", Opts)
+-- Opens the file explorer (nvim-tree):
+Keymap("n", "<leader>e", ":NvimTreeToggle<CR>", Opts)
+
+-- Character Manipulation
+-- "<C-a>" -- Increments value in cursor
+-- "<C-x>" -- Decrements value in cursor
+

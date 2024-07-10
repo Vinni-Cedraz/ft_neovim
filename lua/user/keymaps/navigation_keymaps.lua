@@ -1,22 +1,27 @@
--- Navigate Tabs
+-- Navigate windows:
+-- Ctrl + h/j/k/l to move between windows (h for left, j for down, k for up, l for right)
 Keymap("n", "<C-h>", "<C-w>h", Opts)
 Keymap("n", "<C-j>", "<C-w>j", Opts)
 Keymap("n", "<C-k>", "<C-w>k", Opts)
 Keymap("n", "<C-l>", "<C-w>l", Opts)
 
--- Navigate Buffers
-Keymap("n", "<leader>e", ":NvimTreeToggle<CR>", Opts)
-
 -- Navigate Tabs
+-- Shift + h/l to move between tabs (h for left, l for right)
 Keymap("n", "<S-h>", "<Cmd>BufferPrevious<CR>", Opts)
 Keymap("n", "<S-l>", "<Cmd>BufferNext<CR>", Opts)
+
+-- Close current tab:
 Keymap("n", "<S-t>", "<Cmd>BufferClose!<CR>", Opts)
+-- Repositions the current tab to the left:
 Keymap("n", "<C-S-M-h>", "<Cmd>BufferMovePrevious<CR>", Opts)
+-- Repositions the current tab to the right:
 Keymap("n", "<C-S-M-l>", "<Cmd>BufferMoveNext<CR>", Opts)
+-- Pins the current tab:
 Keymap("n", "<C-S-M-P>", "<Cmd>BufferPin<CR>", Opts)
+-- Closes all tabs except the current one or the pinned ones:
 Keymap("n", "<leader>x", "<Cmd>BufferCloseAllButCurrentOrPinned<CR>", Opts)
+-- Goes into buffer-picking mode:
 Keymap("n", "<leader>p", "<Cmd>BufferPick<CR>", Opts) -- Magic buffer-picking mode
-Keymap("n", "<leader>bb", "<Cmd>BufferOrderByBufferNumber<CR>", Opts) -- Sort automatically by...
 
 -- Rest of the possible barbar keymaps --
 -- Keymap('n', '<Space>bd', '<Cmd>BufferOrderByDirectory<CR>', Opts)

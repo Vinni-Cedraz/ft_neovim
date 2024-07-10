@@ -21,11 +21,4 @@ Keymap(
 Keymap("v", "<C-j>", ":m '>+1<CR>gv=gv") -- CTRL + j in visual mode moves every line selected down
 Keymap("v", "<C-k>", ":m '<-2<CR>gv=gv") -- CTRL + k in visual mode moves every line selected up
 
--- Character Manipulation
-Keymap("n", "<leader>+", "<C-a>") -- Increments value in cursor
-Keymap("n", "<leader>-", "<C-x>") -- Decrements value in cursor
-
--- experimental normal mode keymap that makes more sense to me when my hand is in proper typing position
-Keymap("i", "kl", "<ESC>", Opts)
-
 Keymap("n", "mini", ":lua require('mini.colors').interactive()<CR>", Opts)
