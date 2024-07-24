@@ -1,6 +1,6 @@
 Language: Cpp
 BasedOnStyle: Google
 TabWidth: 4
-IndentWidth: 4
+IndentWidth: 2
 UseTab: Never
 ColumnLimit: 120
