@@ -15,7 +15,7 @@ Keymap("n", "<S-w>", ":w<CR>", Opts)                    -- save current buffer
 Keymap("n", "<S-x>", ":x<CR>", Opts)                    -- save and exit current buffer
 Keymap("n", "<S-q>", ":q<cr>", Opts)                    -- quit floating window
 Keymap("n", "<C-q>", ":qa!<cr>", Opts)                  -- quit all buffers without saving
-Keymap("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/]], Opts) -- rename all instances of the thing under cursor on current buffer
+Keymap("n", "<leader>s", [[:%s/\<<C-r><C-w>\>//g<Left><Left>]], Opts) -- rename all instances of the thing under cursor on current buffer
 -- Comment Code
 Keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>')
 Keymap(
