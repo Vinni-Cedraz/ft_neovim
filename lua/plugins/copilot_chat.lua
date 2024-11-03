@@ -8,13 +8,8 @@ return {
 		},
 		opts = {
 			debug = true, -- Enable debugging
-			model = 'gpt-4', -- 'gpt-3.5-turbo' or 'gpt-4'
+			model = 'claude-3.5-sonnet', -- 'gpt-3.5-turbo' or 'gpt-4'
 			temperature = 0.1,
-		},
-		lazy = true,
-		cmd = "CopilotChatToggle",
-		keys = {
-			"gpt",
 		},
 	}
 }
