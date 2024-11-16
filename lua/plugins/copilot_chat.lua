@@ -8,8 +8,8 @@ return {
 		},
 		opts = {
 			debug = true, -- Enable debugging
-			model = 'claude-3.5-sonnet', -- 'gpt-3.5-turbo' or 'gpt-4'
+			model = "gpt-4-0125-preview", -- example: 'gpt-4' or 'claude-3.5-sonnet'
 			temperature = 0.1,
 		},
-	}
+	},
 }
