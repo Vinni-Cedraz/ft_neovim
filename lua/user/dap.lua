@@ -1,3 +1,24 @@
+-- Setup mason-nvim-dap
+local mason_dap_status_ok, mason_dap = pcall(require, "mason-nvim-dap")
+if not mason_dap_status_ok then
+	return
+end
+
+mason_dap.setup({
+	ensure_installed = { "codelldb" },
+	automatic_installation = true,
+})
+
+local registry = require("mason-registry")
+local adapters = { "codelldb", "debugpy", "js-debug-adapter", "delve" }
+
+for _, adapter in ipairs(adapters) do
+	if not registry.is_installed(adapter) then
+		registry.get_package(adapter):install()
+	end
+end
+
+-- Configure nvim-dap for Python and C/C++
 local dap_status_ok, dap = pcall(require, "dap")
 if not dap_status_ok then
 	return
@@ -8,21 +29,57 @@ if not dap_ui_status_ok then
 	return
 end
 
-local dap_install_status_ok, dap_install = pcall(require, "dap-install")
-if not dap_install_status_ok then
-	return
-end
+dap.adapters.python = {
+	type = "executable",
+	command = "python3",
+	args = { "-m", "debugpy.adapter" },
+}
 
-dap_install.setup({})
+dap.configurations.python = {
+	{
+		type = "python",
+		request = "launch",
+		name = "Launch file",
+		program = "${file}",
+		pythonPath = function()
+			local venv_path = os.getenv("VIRTUAL_ENV")
+			if venv_path then
+				return venv_path .. "/bin/python"
+			else
+				return "/usr/bin/python"
+			end
+		end,
+	},
+}
 
-dap_install.config("python", {})
--- add other configs here
+dap.adapters.codelldb = {
+	type = "server",
+	port = "${port}",
+	executable = {
+		command = "codelldb",
+		args = { "--port", "${port}" },
+	},
+}
+
+dap.configurations.cpp = {
+	{
+		name = "Launch file",
+		type = "codelldb",
+		request = "launch",
+		program = function()
+			return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+		end,
+		cwd = "${workspaceFolder}",
+		stopOnEntry = false,
+	},
+}
+
+dap.configurations.c = dap.configurations.cpp
 
 dapui.setup({
 	expand_lines = true,
 	icons = { expanded = "", collapsed = "", circular = "" },
 	mappings = {
-		-- Use a table to apply multiple mappings
 		expand = { "<CR>", "<2-LeftMouse>" },
 		open = "o",
 		remove = "d",
@@ -52,8 +109,8 @@ dapui.setup({
 	},
 	floating = {
 		max_height = 0.9,
-		max_width = 0.5, -- Floats will be treated as percentage of your screen.
-		border = vim.g.border_chars, -- Border style. Can be 'single', 'double' or 'rounded'
+		max_width = 0.5,
+		border = vim.g.border_chars,
 		mappings = {
 			close = { "q", "<Esc>" },
 		},
@@ -63,14 +120,14 @@ dapui.setup({
 vim.fn.sign_define("DapBreakpoint", { text = "", texthl = "DiagnosticSignError", linehl = "", numhl = "" })
 
 dap.listeners.before.attach.dapui_config = function()
-  dapui.open()
+	dapui.open()
 end
 dap.listeners.before.launch.dapui_config = function()
-  dapui.open()
+	dapui.open()
 end
 dap.listeners.before.event_terminated.dapui_config = function()
-  dapui.close()
+	dapui.close()
 end
 dap.listeners.before.event_exited.dapui_config = function()
-  dapui.close()
+	dapui.close()
 end

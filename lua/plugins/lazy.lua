@@ -87,6 +87,7 @@ return {
 	{ "nvim-telescope/telescope-fzf-native.nvim", lazy = true },
 	{ "nvim-treesitter/nvim-treesitter",          lazy = false },
 	{ "williamboman/mason.nvim",                  lazy = true },
+	{ "williamboman/mason-nvim-dap.nvim",                  lazy = true },
 	{ "goolord/alpha-nvim",                       lazy = true },
 	{ "mbbill/undotree",                          lazy = true, cmd = "UndotreeToggle" },
 	{
