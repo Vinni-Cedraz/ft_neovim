@@ -24,6 +24,13 @@ mason_lspconfig.setup({
 	automatic_installation = true,
 })
 
+local mason_registry = require('mason-registry')
+
+-- Ensure black is installed
+if not mason_registry.is_installed('black') then
+	mason_registry.get_package('black'):install()
+end
+
 local opts = {
 	on_attach = require("user.lsp.handlers").on_attach,
 	capabilities = require("user.lsp.handlers").capabilities,
