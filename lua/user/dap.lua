@@ -31,7 +31,7 @@ end
 
 dap.adapters.python = {
 	type = "executable",
-	command = "python3",
+    command = vim.fn.stdpath("data") .. "/mason/packages/debugpy/venv/bin/python3",
 	args = { "-m", "debugpy.adapter" },
 }
 
@@ -44,9 +44,9 @@ dap.configurations.python = {
 		pythonPath = function()
 			local venv_path = os.getenv("VIRTUAL_ENV")
 			if venv_path then
-				return venv_path .. "/bin/python"
+				return venv_path .. "/bin/python3"
 			else
-				return "/usr/bin/python"
+				return "/usr/bin/python3"
 			end
 		end,
 	},
